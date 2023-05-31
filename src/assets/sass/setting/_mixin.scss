@@ -32,5 +32,5 @@ $baseFontSize: 16;
 
 //size変換
 @function rem($pixels) {
-  @return $pixels / $baseFontSize * 1rem;
+  @return ($pixels / $baseFontSize * 1rem);
 }

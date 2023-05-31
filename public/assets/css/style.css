@@ -219,7 +219,7 @@ a {
 
 .l-header__logo img:hover {
 	filter: none;
-	opacity: 0.7;
+	opacity: 0.6;
 	transition: all 0.4s;
 }
 
@@ -632,7 +632,7 @@ a {
 
 .c-header__nav-item:hover {
 	color: #6f3f1e;
-	opacity: 0.7;
+	opacity: 0.6;
 }
 
 .c-header__sns-links {
@@ -957,6 +957,16 @@ a {
 	z-index: 30;
 }
 
+.breadcrumb {
+	display: flex;
+	margin-top: 40px;
+	padding-left: 30px;
+}
+
+.breadcrumb span {
+	margin: 0 10px;
+}
+
 .c-footer__logo {
 	height: auto;
 	padding-top: 50px;
@@ -1017,7 +1027,7 @@ a {
 }
 
 .wp-block-table {
-	margin: 61px auto 0;
+	margin: 60px auto 0;
 	max-width: 100%;
 	width: 570px;
 }
@@ -1026,15 +1036,138 @@ a {
 	border: none;
 }
 
-#mw_wp_form_mw-wp-form-35 h3 {
-	position: relative;
-}
-
 #mw_wp_form_mw-wp-form-35 input[type=text],
 #mw_wp_form_mw-wp-form-35 input[type=email],
 #mw_wp_form_mw-wp-form-35 input[type=url],
 #mw_wp_form_mw-wp-form-35 input[type=hidden] {
 	border: none;
+	border-bottom: 1px solid #333;
+	line-height: 27px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+
+#mw_wp_form_mw-wp-form-35 textarea {
+	height: 180px;
+	width: 100%;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=submit] {
+	background-color: #333;
+	border: 1px solid #333;
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0em;
+	line-height: 1;
+	margin-top: 40px;
+	padding: 50px;
+	transition: all 0.4s;
+	width: 100%;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=submit]:hover {
+	background: #fff;
+	color: #333;
+	transition: all 0.4s;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=radio] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: 1px solid #595757;
+	border-radius: 50%;
+	height: 16px;
+	position: relative;
+	width: 16px;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=radio]:checked::before {
+	background: #F7B97D;
+	border-radius: 50%;
+	content: "";
+	height: 10px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border: 1px solid #595757;
+	height: 20px;
+	margin: -3px 15px 0 0;
+	width: 20px;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=checkbox]:checked::before {
+	-webkit-mask: url(../img/check-box.svg) no-repeat center center/cover;
+	background-color: #F7B97D;
+	content: "";
+	display: block;
+	height: 18px;
+	left: 0;
+	mask: url(../img/check-box.svg) no-repeat center center/cover;
+	top: 0;
+	width: 18px;
+}
+
+.c-form__title {
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: 0.01936em;
+	line-height: 1;
+	margin: 20px 0;
+}
+
+.c-form th {
+	border: none;
+	border-bottom: 1px solid #d8d8d8;
+	padding: 20px 0 10px;
+	position: relative;
+	white-space: nowrap;
+	width: 210px;
+}
+
+.c-form td {
+	margin-left: 20px;
+	padding-bottom: 0;
+	width: calc(100% - 230px);
+}
+
+.c-form__privacyPoricy {
+	display: flex;
+	justify-content: center;
+}
+
+.c-form__privacyLink {
+	display: flex;
+}
+
+.c-form__privacyLink a {
+	border-bottom: 1px solid #595757;
+}
+
+.c-form__privacyLink a:hover {
+	opacity: 0.6;
+}
+
+.c-required {
+	color: #ee1111;
+	margin-left: 5px;
+	position: relative;
+	top: -3px;
+}
+
+.c-privacy {
+	margin-top: 40px;
+	text-align: center;
 }
 
 .l-top:hover .swiper-slide-item {
@@ -1257,6 +1390,15 @@ main {
 	width: 40px;
 }
 
+.breadcrumb {
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+.breadcrumb span {
+	margin-left: 5px;
+}
+
 .c-footer__body {
 	display: block;
 	margin: 20px auto 40px;
@@ -1269,6 +1411,41 @@ main {
 
 .c-footer__address {
 	margin-top: 40px;
+	width: 100%;
+}
+
+.wp-block-table {
+	margin-top: 40px;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=text],
+#mw_wp_form_mw-wp-form-35 input[type=email],
+#mw_wp_form_mw-wp-form-35 input[type=url],
+#mw_wp_form_mw-wp-form-35 input[type=hidden] {
+	border: 1px solid #333;
+}
+
+#mw_wp_form_mw-wp-form-35 textarea {
+	margin-top: 20px;
+}
+
+.c-form__title {
+	margin-bottom: 0;
+}
+
+.c-form tr {
+	display: flex;
+	flex-direction: column;
+}
+
+.c-form th {
+	border: none;
+	width: 100%;
+}
+
+.c-form td {
+	margin-left: 0;
+	padding: 0;
 	width: 100%;
 }
 
