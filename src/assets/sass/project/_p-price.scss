@@ -1,0 +1,30 @@
+@use "../setting" as set;
+
+.p-price__table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 80%;
+
+  @include set.mq("sp") {
+    width: 100%
+  }
+
+  th,
+  td {
+    @include set.font(16, 16, 19.36, 400);
+    border: 1px solid set.$color-line;
+    padding: 8px 20px;
+  }
+
+  th {
+    width: 30%;
+  }
+  tr:nth-child(2n) {
+    background-color: set.$color-background;
+  }
+}
+
+.p-price__text {
+  @include set.font(12, 12, 0, 400);
+  margin-top: 10px;
+}

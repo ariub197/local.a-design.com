@@ -1,0 +1,62 @@
+@use "../setting" as set;
+
+.l-catch {
+  position: relative;
+  padding-top: 40px;
+  padding: 0 calc(set.$pd-x-pc / 2);
+  max-width: 1280px;
+
+  @include set.mq("tab") {
+    padding-top: 100px;
+  }
+
+  @include set.mq("sp") {
+    padding: 159px set.$pd-x-sp 0;
+  }
+
+  &__phrase {
+    position: absolute;
+    top: 0;
+    transform: translateY(-42%);
+    z-index: 2;
+
+    @include set.mq("sp") {
+      top: 50px;
+      width: 90%;
+    }
+
+    &:hover {
+      .c-catch__phrase span::before,
+      .c-catch__phrase span::after {
+        background: set.$color-accent;
+        transition: all .4s;
+      }
+      .c-catch__phrase-accent {
+        color: set.$color-accent;
+        transition: all .4s;
+      }
+      .l-text-accent::after {
+        background: set.$color-accent;
+        transition: all .4s;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    padding-left: calc(set.$pd-x-pc / 2);
+
+    @include set.mq("sp") {
+      display: block;
+      padding-left: 0;
+    }
+
+  }
+
+  &__text {
+    width: 50%;
+  }
+}
+

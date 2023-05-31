@@ -1,0 +1,31 @@
+@use "../setting" as set;
+
+.wp-block-table {
+  width: 570px;
+  max-width: 100%;
+  margin: 61px auto 0;
+
+  td {
+    border: none;
+  }
+}
+
+
+#mw_wp_form_mw-wp-form-35 {
+
+  h3 {
+    position: relative;
+    
+  }
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="hidden"] {
+    border: none;
+  
+  }
+
+}
+

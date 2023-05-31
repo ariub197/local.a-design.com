@@ -1,0 +1,5 @@
+@use "../setting" as set;
+
+.l-inner {
+	@include set.inner;
+}

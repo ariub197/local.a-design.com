@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "../setting" as set;
+
+.l-header {
+  position: fixed;
+  background: set.$header-color;
+  width: 20%;
+  min-width: 225px;
+  height: 100%;
+  padding: 50px 20px;
+  z-index: map.get(set.$layer, header);
+  box-shadow: set.$header-shadow;
+
+  @include set.mq("sp") {
+    display: none;
+  }
+
+  &__pc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo {
+    img {
+      filter: set.$img-filter;
+
+      &:hover {
+        transition: all .4s;
+        opacity: set.$opacity;
+        filter: none;
+      }
+      @include set.mq("sp") {
+        filter: none;
+      }
+    }
+  }
+  &__nav {
+    padding-left: 0.8rem;
+    margin-top: 100px;
+  }
+
+  &__contact {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}

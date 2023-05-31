@@ -1,0 +1,27 @@
+@use "../setting" as set;
+
+.l-work {
+
+  &__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    flex: 0 1 calc(50% - 62px / 2);
+    &:nth-child(2n) {
+      margin-left: 62px;
+    }
+    &:nth-child(n + 3) {
+      margin-top: 40px;
+    }
+
+    @include set.mq("tab") {
+      flex: 0 1 calc(50% - 10px);
+      &:nth-child(2n) {
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../setting" as set;
+
+
+.l-top {
+  &:hover {
+    .swiper-slide-item {
+      transition: all .8s;
+      filter: none;
+    }
+  }
+}
+
+.swiper-android .swiper-slide, .swiper-wrapper,
+.swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-prev {
+  object-fit: contain;
+}
+
+.swiper-slide-item {
+  filter: set.$img-filter;
+
+  @include set.mq("sp") {
+    filter: none;
+  }
+}

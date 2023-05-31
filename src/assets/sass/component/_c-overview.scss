@@ -1,0 +1,32 @@
+@use "../setting" as set;
+
+.c-overview {
+  width: 570px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  dl {
+    padding: 20px 0;
+    display: flex;
+    border-bottom: 1px solid set.$color-line;
+  }
+
+  dt {
+    @include set.font(16, 16, 19.36, 700);
+    width: 122px;
+
+    @include set.mq("sp") {
+      width: 90px;
+    }
+  }
+
+  dd {
+    @include set.font(16, 24, 19.36, 400);
+    width: calc(100% - 122px);
+    margin-left: 20px;
+  }
+}
+
+.c-overvirew__work {
+  margin-top: 20px;
+}
