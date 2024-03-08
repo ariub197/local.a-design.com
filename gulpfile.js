@@ -12,21 +12,21 @@ const htmlBeautify = require("gulp-html-beautify"); //htmlの整形
 
 //sassのコンパイル
 function compileSass() {
-  return gulp.src("./src/assets/sass/**/*.scss")
+  return gulp.src("./src/assets/css/**/*.scss")
   .pipe(sass())
   .pipe(postcss([autoprefixer(), cssSorter()]))
   .pipe(mmq())
-  .pipe(gulp.dest("./public/assets/css"))
+  .pipe(gulp.dest("./src/assets/css/"))
   .pipe(cleanCss())
   .pipe(rename({
     suffix: ".min"
   }))
-  .pipe(gulp.dest("./public/assets/css"))
+  .pipe(gulp.dest("./src/assets/css/"))
 }
 
 
 function watch(){
-  gulp.watch("./src/assets/sass/**/*.scss", gulp.series(compileSass, browserReload));//左から順に読み込まれる
+  gulp.watch("./src/assets/css/**/*.scss", gulp.series(compileSass, browserReload));//左から順に読み込まれる
   gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload));
   gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));
   gulp.watch("../**/*.php", browserReload);
@@ -47,12 +47,12 @@ function browserReload(done) {
 //jsコンパイル
 function minJS() {
   return gulp.src("./src/assets/js/**/*.js")
-  .pipe(gulp.dest("./public/assets/js"))
+  .pipe(gulp.dest("./src/assets/js"))
   .pipe(uglify())
   .pipe(rename({
     suffix: ".min"
   }))
-  .pipe(gulp.dest("./public/assets/js"))
+  .pipe(gulp.dest("./src/assets/js"))
 }
 
 //HTMLの整形
@@ -68,13 +68,13 @@ function formatHTML(done) {
 
 function copyImage() {
   return gulp.src("./src/assets/img/**/*")
-  .pipe(gulp.dest("./public/assets/img/"))
+  .pipe(gulp.dest("./src/assets/img/"))
 }
 
 exports.compileSass = compileSass;
 exports.watch = watch;
 exports.browserInit = browserInit;
-exports.dev = gulp.parallel(formatHTML, browserInit, watch);
+exports.build = gulp.parallel(formatHTML, browserInit, watch);
 exports.minJS = minJS;
 exports.formatHTML = formatHTML;
-exports.build = gulp.parallel(formatHTML, minJS, compileSass, copyImage)
+exports.dev = gulp.parallel(formatHTML, minJS, compileSass, copyImage)
