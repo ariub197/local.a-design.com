@@ -1,0 +1,87 @@
+@use "../../global/" as g;
+
+.p-works {
+
+  &__title {
+    @include g.font(38, 38, 1, 400);
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include g.mq("sp") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @include g.mq("sp") {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__date {
+    color: g.$color-sub;
+  }
+
+  &__link {
+    @include g.mq("sp") {
+      margin-top: 20px;
+    }
+    &:hover {
+      opacity: g.$opacity;
+    }
+  }
+
+  &__basic {
+    margin-bottom: 40px;
+  }
+
+  &__basic-title {
+    display: flex;
+    @include g.font(16, 16, 1, 400);
+    margin-bottom: 10px;
+  }
+
+  &__basic-text {
+    position: relative;
+    width: 120px;
+    margin-right: 20px;
+
+    &::after {
+      position: absolute;
+      content: ":";
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__page-nation {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__page-link {
+    a:hover {
+      opacity: g.$opacity;
+    }
+  }
+
+  &__link-sum {
+    padding: 10px 50px;
+    color: g.$btn-color;
+    background: g.$btn-background;
+    border: 1px solid g.$btn-solid;
+    margin: 0 50px;
+
+    &:hover {
+      background: g.$btn-hover;
+    }
+  }
+}

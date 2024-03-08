@@ -1,0 +1,21 @@
+@use '../../global' as g;
+
+/* color
+----------------------------------------------------------------- */
+.u-color {
+  &--white {
+    color: g.$white;
+  }
+
+  &--black {
+    color: g.$black_base;
+  }
+
+  &--navy {
+    color: g.$navy;
+  }
+
+  &--orange-light {
+    color: g.$orange_light;
+  }
+}

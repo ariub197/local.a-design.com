@@ -1,0 +1,23 @@
+/* img
+----------------------------------------------------------------- */
+@use '../../global' as g;
+$device: 3rem;
+
+.u-img {
+  &--question {
+    width: g.$icon_question_width;
+    height: 1.4rem;
+  }
+
+  &--device {
+    display: inline-flex;
+    min-width: $device;
+    max-width: $device;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--clipboard {
+    cursor: pointer;
+  }
+}

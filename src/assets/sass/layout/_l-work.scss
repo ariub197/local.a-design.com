@@ -6,6 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include set.mq("sp") {
+      display: block;
+    }
   }
 
   &__card {
@@ -21,6 +25,12 @@
       flex: 0 1 calc(50% - 10px);
       &:nth-child(2n) {
         margin-left: 20px;
+      }
+    }
+    @include set.mq("sp") {
+      width: 100%;
+      &:nth-child(2n) {
+        margin-left: 0px;
       }
     }
   }

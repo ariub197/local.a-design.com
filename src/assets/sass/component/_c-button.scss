@@ -56,6 +56,42 @@
   }
 }
 
+.c-contact-button-sp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 5px 12px;
+  background: set.$header-background;
+  box-shadow: set.$box-shadow;
+  border-radius: 0 0 6px 6px;
+  
+  img {
+    width: 28px;
+    height: auto;
+    margin: 0 auto 3px;
+  }
+  
+  &::after {
+    position: absolute;
+    content: "Contact";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:hover {
+    transition: all .4s;
+    background: set.$btn-hover;
+    color: #fff;
+  
+    img {
+      filter: invert(100);
+      transition: all .4s;
+    }
+  }
+
+}
+
 .c-content-button {
   margin-left: auto;
   margin-top: 40px;
@@ -113,6 +149,6 @@
     height: 40px;
     bottom: 20px;
     right: 20px;
-    padding: 11px 13px;
+    padding: 13px 14px;
   }
 }

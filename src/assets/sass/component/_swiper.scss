@@ -10,13 +10,20 @@
   }
 }
 
-.swiper-android .swiper-slide, .swiper-wrapper,
-.swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-prev {
-  object-fit: contain;
-}
+// .swiper-android .swiper-slide, .swiper-wrapper,
+// .swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-prev {
+//   object-fit: contain;
+// }
 
 .swiper-slide-item {
   filter: set.$img-filter;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  img {
+    object-fit: contain;
+  }
 
   @include set.mq("sp") {
     filter: none;

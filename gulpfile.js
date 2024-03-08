@@ -47,6 +47,7 @@ function browserReload(done) {
 //jsコンパイル
 function minJS() {
   return gulp.src("./src/assets/js/**/*.js")
+  .pipe(gulp.dest("./public/assets/js"))
   .pipe(uglify())
   .pipe(rename({
     suffix: ".min"

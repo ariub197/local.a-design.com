@@ -234,6 +234,27 @@ a {
 	width: 100%;
 }
 
+.l-header__sp {
+	display: none;
+	height: 50px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	z-index: 20;
+}
+
+.l-header__logo-sp {
+	width: 208px;
+}
+
+.l-header__contact-sp {
+	height: 50px;
+	position: fixed;
+	right: 60px;
+	top: 0;
+	width: 80px;
+}
+
 .l-inner {
 	margin: 0 auto;
 	max-width: 100%;
@@ -419,7 +440,7 @@ a {
 	position: fixed;
 	right: 0;
 	top: 0;
-	transform: translateY(-105%);
+	transform: translateY(-110%);
 	transition: transform 0.5s ease 0s;
 	width: 100%;
 	z-index: 30;
@@ -461,7 +482,7 @@ a {
 	margin-left: 20px;
 }
 
-.l-header__contact-sp {
+.l-drawer__contact-sp {
 	margin: 150px auto 0;
 	max-width: 100%;
 	padding: 0 20px;
@@ -903,6 +924,42 @@ a {
 	transition: all 0.4s;
 }
 
+.c-contact-button-sp {
+	align-items: center;
+	background: #fff;
+	border-radius: 0 0 6px 6px;
+	box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
+	display: flex;
+	padding: 5px 5px 12px;
+	position: relative;
+	width: 100%;
+}
+
+.c-contact-button-sp img {
+	height: auto;
+	margin: 0 auto 3px;
+	width: 28px;
+}
+
+.c-contact-button-sp::after {
+	bottom: 0;
+	content: "Contact";
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.c-contact-button-sp:hover {
+	background: #F7B97D;
+	color: #fff;
+	transition: all 0.4s;
+}
+
+.c-contact-button-sp:hover img {
+	filter: invert(100);
+	transition: all 0.4s;
+}
+
 .c-content-button {
 	-webkit-clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
 	background: #757575;
@@ -1048,6 +1105,7 @@ a {
 }
 
 #mw_wp_form_mw-wp-form-35 textarea {
+	border: 1px solid #d8d8d8;
 	height: 180px;
 	width: 100%;
 }
@@ -1132,16 +1190,23 @@ a {
 	padding: 20px 0 10px;
 	position: relative;
 	white-space: nowrap;
-	width: 210px;
+	width: 140px;
 }
 
 .c-form td {
 	margin-left: 20px;
 	padding-bottom: 0;
-	width: calc(100% - 230px);
+	position: relative;
+	width: calc(100% - 160px);
 }
 
-.c-form__privacyPoricy {
+.c-form td .error {
+	position: absolute;
+	right: 0;
+	top: 35%;
+}
+
+.c-form__privacyPolicy {
 	display: flex;
 	justify-content: center;
 }
@@ -1175,15 +1240,16 @@ a {
 	transition: all 0.8s;
 }
 
-.swiper-android .swiper-slide,
-.swiper-wrapper,
-.swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-prev {
-	-o-object-fit: contain;
-	object-fit: contain;
-}
-
 .swiper-slide-item {
 	filter: grayscale(100%) contrast(80%);
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+}
+
+.swiper-slide-item img {
+	-o-object-fit: contain;
+	object-fit: contain;
 }
 
 .p-price__table {
@@ -1216,6 +1282,151 @@ a {
 	letter-spacing: 0em;
 	line-height: 1;
 	margin-top: 10px;
+}
+
+.p-privacy h3 {
+	font-size: 1.375rem;
+	font-weight: 700;
+	letter-spacing: 0em;
+	line-height: 1;
+	margin: 40px 0 20px;
+}
+
+.p-privacy p {
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0em;
+	line-height: 1.75;
+}
+
+.p-privacy li {
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0em;
+	line-height: 1.75;
+	list-style: decimal;
+	margin-left: 20px;
+}
+
+.wp-block-embed-twitter {
+	margin-bottom: 40px;
+}
+
+.p-works__title {
+	font-size: 2.375rem;
+	font-weight: 400;
+	letter-spacing: 0.001em;
+	line-height: 1;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.p-works__meta {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.p-works__date {
+	color: #595757;
+}
+
+.p-works__link:hover {
+	opacity: 0.6;
+}
+
+.p-works__basic {
+	margin-bottom: 40px;
+}
+
+.p-works__basic-title {
+	display: flex;
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.001em;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.p-works__basic-text {
+	margin-right: 20px;
+	position: relative;
+	width: 120px;
+}
+
+.p-works__basic-text::after {
+	content: ":";
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.p-works__page-nation {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 80px;
+}
+
+.p-works__page-link a:hover {
+	opacity: 0.6;
+}
+
+.p-works__link-sum {
+	background: #757575;
+	border: 1px solid #333;
+	color: #fff;
+	margin: 0 50px;
+	padding: 10px 50px;
+}
+
+.p-works__link-sum:hover {
+	background: #F7B97D;
+}
+
+.p-error-page {
+	font-size: 8rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	margin-top: 300px;
+	text-align: center;
+}
+
+.p-error-title {
+	color: #595757;
+	font-size: 1.75rem;
+	font-weight: 700;
+	letter-spacing: 0.001em;
+	line-height: 1;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.p-error-text {
+	font-size: 1.125rem;
+	font-weight: 400;
+	letter-spacing: 0.001em;
+	line-height: 1;
+	text-align: center;
+}
+
+.p-error-btn {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 120px;
+}
+
+.p-error__top {
+	font-size: 20px;
+	margin-top: 40px;
+	text-align: center;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-error__top:hover {
+	opacity: 0.6;
 }
 
 @media (max-width: 1109px) {
@@ -1269,15 +1480,21 @@ body {
 }
 
 main {
+	padding-top: 50px;
 	width: 100%;
 }
 
 .l-header {
 	display: none;
+	padding: 0px;
 }
 
 .l-header__logo img {
 	filter: none;
+}
+
+.l-header__sp {
+	display: flex;
 }
 
 .l-inner {
@@ -1296,6 +1513,18 @@ main {
 .l-catch__body {
 	display: block;
 	padding-left: 0;
+}
+
+.l-work__card-list {
+	display: block;
+}
+
+.l-work__card {
+	width: 100%;
+}
+
+.l-work__card:nth-child(2n) {
+	margin-left: 0px;
 }
 
 .l-content {
@@ -1365,6 +1594,7 @@ main {
 }
 
 .c-catch__body {
+	float: none;
 	padding-bottom: 0;
 	text-align: center;
 	width: 100%;
@@ -1385,7 +1615,7 @@ main {
 #c-pagetop {
 	bottom: 20px;
 	height: 40px;
-	padding: 11px 13px;
+	padding: 13px 14px;
 	right: 20px;
 	width: 40px;
 }
@@ -1415,18 +1645,24 @@ main {
 }
 
 .wp-block-table {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 #mw_wp_form_mw-wp-form-35 input[type=text],
 #mw_wp_form_mw-wp-form-35 input[type=email],
 #mw_wp_form_mw-wp-form-35 input[type=url],
 #mw_wp_form_mw-wp-form-35 input[type=hidden] {
-	border: 1px solid #333;
+	border: 1px solid #d8d8d8;
+	line-height: 30px;
+	padding-bottom: 3px;
 }
 
 #mw_wp_form_mw-wp-form-35 textarea {
 	margin-top: 20px;
+}
+
+#mw_wp_form_mw-wp-form-35 input[type=submit] {
+	padding: 20px;
 }
 
 .c-form__title {
@@ -1455,6 +1691,27 @@ main {
 
 .p-price__table {
 	width: 100%;
+}
+
+.p-works__title {
+	margin-bottom: 20px;
+}
+
+.p-works__meta {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.p-works__link {
+	margin-top: 20px;
+}
+
+.p-error-page {
+	margin-top: 150px;
+}
+
+.p-error-btn {
+	padding-bottom: 60px;
 }
 
 }

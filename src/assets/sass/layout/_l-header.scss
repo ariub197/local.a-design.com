@@ -13,6 +13,7 @@
 
   @include set.mq("sp") {
     display: none;
+    padding: 0px;
   }
 
   &__pc {
@@ -45,4 +46,28 @@
     position: absolute;
     bottom: 0;
   }
+}
+
+.l-header__sp {
+  position: fixed;
+  display: none;
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: map.get(set.$layer, header);
+  @include set.mq("sp") {
+    display: flex;
+  }
+}
+
+.l-header__logo-sp {
+  width: 208px;
+}
+
+.l-header__contact-sp {
+  position: fixed;
+  top: 0;
+  right: 60px;
+  width: 80px;
+  height: 50px;
 }

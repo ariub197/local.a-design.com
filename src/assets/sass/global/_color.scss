@@ -1,0 +1,38 @@
+// ベース色
+$color-main: #333;
+$color-sub: #595757;
+$color-accent: #F7B97D;
+$color-background: #d8d8d8;
+$color-text: #333333;
+$color-line: #595757;
+$text-accent: #d8d8d8;
+$color-brown: #6f3f1e;
+
+// 透過度
+$opacity: 0.6;
+
+//filter
+$img-filter: grayscale(100%) contrast(80%);
+
+// ヘッダー
+$header-background: #fff;
+$header-color: #fff;
+$drawer-menu: #F7B97D;
+
+//shadow
+$header-shadow: 5px 0px 2px rgba(0, 0, 0, 0.08);
+$header-contact: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+$box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
+
+// フッター
+$footer-background: #333;
+
+// button
+$btn-background: #757575;
+$btn-solid: #333;
+$btn-color: #fff;
+$btn-hover: #F7B97D;
+$pagetop: #d8d8d8;
+
+//required
+$required-color: #ee1111;

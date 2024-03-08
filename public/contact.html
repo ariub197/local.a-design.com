@@ -1,36 +1,38 @@
 <table class="c-form">
 	<tbody>
-		<tr>
-			<th>御社名</th>
-			<td>[mwform_text name="会社名" size="60"]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">御社名</th>
+			<td class="c-form__text">[mwform_text name="会社名" size="60"]</td>
 		</tr>
-		<tr>
-			<th>ご担当者名</th>
-			<td>[mwform_text name="お名前" size="60" required]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">ご担当者名<span class="c-required">*</span></th>
+			<td class="c-form__text">[mwform_text name="お名前" size="60" required]</td>
 		</tr>
-		<tr>
-			<th>フリガナ</th>
-			<td>[mwform_text name="フリガナ" class="c-contactform" size="60" required]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">フリガナ<span class="c-required">*</span></th>
+			<td class="c-form__text">[mwform_text name="フリガナ" class="c-contactform" size="60" required]</td>
 		</tr>
-		<tr>
-			<th>電話番号</th>
-			<td>[mwform_tel name="電話番号"]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">電話番号</th>
+			<td class="c-form__text">[mwform_tel name="電話番号"]</td>
 		</tr>
-		<tr>
-			<th>メールアドレス</th>
-			<td>[mwform_email name="メールアドレス" size="60"]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">メールアドレス<span class="c-required">*</span></th>
+			<td class="c-form__text">[mwform_email name="メールアドレス" size="60"]</td>
 		</tr>
-		<tr>
-			<th>ウェブサイト</th>
-			<td>[mwform_url name="ウェブサイト" size="60"]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">ウェブサイト</th>
+			<td class="c-form__text">[mwform_url name="ウェブサイト" size="60"]</td>
 		</tr>
-		<tr>
-			<th>お問い合わせ種目</th>
-			<td>[mwform_select name="質問内容" children="案件依頼,相談・質問,その他"]</td>
+		<tr class="c-form__input">
+			<th class="c-form__title">お問い合わせ種目<span class="c-required">*</span></th>
+			<td class="c-form__text">[mwform_radio name="form_select" children="案件依頼,相談・質問,その他"]</td>
 		</tr>
-		<tr>
-			<th>ご依頼・ご相談内容</th>
-			<td>[mwform_textarea name="ご依頼・相談内容" cols="50" rows="5"]</td>
-		</tr>
+		<div>
+			<p class="c-form__title">ご依頼・ご相談内容</p>
+			<div>[mwform_textarea name="ご依頼・相談内容" cols="50" rows="5"]</div>
+		</div>
 	</tbody>
+	<div class="c-privacy">[mwform_checkbox name="privacy_btn" children="プライバシーポリシーに同意する" separator=","]</div>
+	<div class="c-form__send">[mwform_submitButton name="確認送信" confirm_value="確認画面へ" submit_value="送信する"]</div>
 </table>

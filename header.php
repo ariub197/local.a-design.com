@@ -23,16 +23,16 @@
   <header id="header">
     <div class="l-header">
       <div class="l-header__pc">
-        <h1 class="l-header__logo"><a href="#"><img
+        <h1 class="l-header__logo"><a href="/"><img
               src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Logo Design.svg"
               alt="Arisumi Design logo"></a>
         </h1>
         <div class="l-header__nav">
           <ul class="c-header__nav">
-            <li><a href="" class="c-header__nav-item">Top<span>トップ</span></a></li>
-            <li><a href="" class="c-header__nav-item">Profile<span>プロフィール</span></a></li>
-            <li><a href="" class="c-header__nav-item">Works<span>制作実績</span></a></li>
-            <li><a href="" class="c-header__nav-item">News<span>お知らせ</span></a></li>
+            <li><a href="/" class="c-header__nav-item">Top<span>トップ</span></a></li>
+            <li><a href="/profile/" class="c-header__nav-item">Profile<span>プロフィール</span></a></li>
+            <li><a href="/works/" class="c-header__nav-item">Works<span>制作実績</span></a></li>
+            <li><a href="/news/" class="c-header__nav-item">News<span>お知らせ</span></a></li>
           </ul>
         </div>
         <div class="c-header__sns-links">
@@ -50,11 +50,21 @@
               </svg>
             </a></div>
         </div>
-        <div class="l-header__contact"><a href="#" class="c-contact-button">
+        <div class="l-header__contact"><a href="/contact/" class="c-contact-button">
             <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/email.svg" alt="">お問い合わせ</a>
         </div>
       </div>
     </div>
+    <div class="l-header__sp">
+      <h1 class="l-header__logo-sp"><a href="/"><img
+            src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Logo Design.svg"
+            alt="Arisumi Design logo"></a>
+      </h1>
+      <div class="l-header__contact-sp"><a href="/contact/" class="c-contact-button-sp">
+          <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/email.svg" alt=""><br></a>
+      </div>
+    </div>
+
     <div id="js-drawer" class="c-drawer-icon">
       <div class="c-drawer-icon__bars">
         <span></span>
@@ -65,10 +75,10 @@
 
     <div class="c-drawer-content">
       <div class="c-drawer-content__items">
-        <div class="c-drawer-content__item"><a href="">Top</a></div>
-        <div class="c-drawer-content__item"><a href="">Profile</a></div>
-        <div class="c-drawer-content__item"><a href="">Works</a></div>
-        <div class="c-drawer-content__item"><a href="">News</a></div>
+        <div class="c-drawer-content__item"><a href="/">Top</a></div>
+        <div class="c-drawer-content__item"><a href="/profile/">Profile</a></div>
+        <div class="c-drawer-content__item"><a href="/works/">Works</a></div>
+        <div class="c-drawer-content__item"><a href="/news/">News</a></div>
       </div>
       <div class="c-header__sns-links-sp">
         <div class="c-header__sns-link"><a href="https://twitter.com/ari19702" class="c-header__sns-link--twitter"><i
@@ -85,7 +95,8 @@
             </svg>
           </a></div>
       </div>
-      <div class="l-header__contact-sp"><a href="#" class="c-contact-button">
+      <div class="l-drawer__contact-sp"><a href="/contact/" class="c-contact-button">
           <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/email.svg" alt="">お問い合わせ</a></div>
     </div>
   </header>
+  <main>

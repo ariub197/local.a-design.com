@@ -1,0 +1,27 @@
+@use '../../global' as g;
+
+/* fontsize
+----------------------------------------------------------------- */
+.u-fontsize {
+  &--smallest {
+    font-size: g.$fs12;
+  }
+
+  &--small {
+    font-size: g.$fs14;
+  }
+
+  &--default {
+    font-size: g.$fs16;
+    @include g.tabletS {
+      font-size: g.$fs14;
+    };
+  }
+
+  &--mid {
+    font-size: g.$fs18;
+    @include g.tabletS {
+      font-size: g.$fs14;
+    };
+  }
+}
