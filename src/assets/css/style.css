@@ -1170,8 +1170,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ----------------------------------------------------------------- */
 
 html {
-	font-size: 62.5%;
-	height: 100%;
+	font-size: 16px;
 }
 
 body {
@@ -2244,13 +2243,13 @@ a {
 
 .l-top:hover .swiper-slide-item {
 	filter: none;
-	transition: all 0.8s;
 }
 
 .swiper-slide-item {
 	filter: grayscale(100%) contrast(80%);
 	height: auto;
 	overflow: hidden;
+	transition: filter 0.8s;
 	width: 100%;
 }
 

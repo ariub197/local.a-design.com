@@ -21,7 +21,7 @@
             <?php if(has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>
             <?php else: ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/No_image.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/No_image.png" alt="">
             <?php endif; ?>
           </div>
           <div class="c-work__card-tag"><?php my_the_post_category(false); ?></div>

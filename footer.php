@@ -2,7 +2,7 @@
   <div class="l-footer">
     <div class="l-content l-inner">
       <div class="c-footer__logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Logo Design-white.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/Logo Design-white.svg" alt="">
       </div>
       <div class="c-footer__body">
         <div class="c-footer__active">

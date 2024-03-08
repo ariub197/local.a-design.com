@@ -1,8 +1,7 @@
 @use "../global/" as g;
 
 html {
-  font-size: 62.5%;
-  height: 100%;
+  font-size: 16px;
   @include g.mobileS {
     font-size: calc(1vw * 1000 / 360);
   }

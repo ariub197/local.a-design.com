@@ -42,7 +42,7 @@
     </div>
     <div class="l-catch__body">
       <div class="c-catch__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Portforio-my-imge.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/Portforio-my-imge.png"
           alt="arisumi-image">
       </div>
       <div class="c-catch__body">
@@ -134,7 +134,7 @@
             <?php if(has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>
             <?php else: ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/No_image.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/No_image.png" alt="">
             <?php endif; ?>
           </div>
           <div class="c-work__card-tag"><?php my_the_post_category(false); ?></div>

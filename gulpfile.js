@@ -6,6 +6,7 @@ const cssSorter = require("css-declaration-sorter");
 const mmq = require("gulp-merge-media-queries");
 const browserSync = require("browser-sync");
 const cleanCss = require("gulp-clean-css"); //cssの圧縮
+const concat   = require('gulp-concat');// concat
 const uglify = require("gulp-uglify"); //jsの圧縮
 const rename = require("gulp-rename");
 const htmlBeautify = require("gulp-html-beautify"); //htmlの整形
@@ -34,7 +35,7 @@ function watch(){
 
 function browserInit(done) {
   browserSync.init({
-    proxy:"http://portfolio.local/"
+    proxy:"http://local.a-design.com:8888/"
   });
   done();
 }
@@ -44,9 +45,17 @@ function browserReload(done) {
   done();
 }
 
+// concat
+gulp.task('js.concat', function () {
+  return gulp.src('./src/assets/js/*.js')
+  .pipe(plumber())
+  .pipe(concat('concat.js'))
+  .pipe(gulp.dest('./src/assets/js'));
+});
+
 //jsコンパイル
 function minJS() {
-  return gulp.src("./src/assets/js/**/*.js")
+  return gulp.src("./src/assets/js/*.js")
   .pipe(gulp.dest("./src/assets/js"))
   .pipe(uglify())
   .pipe(rename({
@@ -62,7 +71,7 @@ function formatHTML(done) {
     indent_size: 2,
     indent_with_tabs: true,
   }))
-  .pipe(gulp.dest("./public/"))
+  .pipe(gulp.dest("./src/"))
   done();
 }
 
@@ -74,7 +83,8 @@ function copyImage() {
 exports.compileSass = compileSass;
 exports.watch = watch;
 exports.browserInit = browserInit;
-exports.build = gulp.parallel(formatHTML, browserInit, watch);
+exports.concat = concat;
+exports.dev = gulp.parallel(compileSass, browserInit, concat, watch);
 exports.minJS = minJS;
 exports.formatHTML = formatHTML;
-exports.dev = gulp.parallel(formatHTML, minJS, compileSass, copyImage)
+exports.build = gulp.parallel(formatHTML, minJS, compileSass, copyImage)

@@ -36,9 +36,9 @@
     </div>
   </div>
   <picture class="c-content__img">
-    <source srcset="<?php echo get_template_directory_uri(); ?>/public/assets/img/Profile-image-sp.png"
+    <source srcset="<?php echo get_template_directory_uri(); ?>/src/assets/img/Profile-image-sp.png"
       media="(max-width: 600px)">
-    <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Profile-image.png" class="c-content__img"
+    <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/Profile-image.png" class="c-content__img"
       alt="image画像">
   </picture>
 </section>

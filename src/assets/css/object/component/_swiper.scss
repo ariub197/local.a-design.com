@@ -3,7 +3,6 @@
 .l-top {
   &:hover {
     .swiper-slide-item {
-      transition: all .8s;
       filter: none;
     }
   }
@@ -19,6 +18,7 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  transition: filter 0.8s;
 
   img {
     object-fit: contain;

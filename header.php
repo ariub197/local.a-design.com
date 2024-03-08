@@ -14,7 +14,7 @@
   <meta name="keywords" content="Web,コーダー,デザイン,東京,Arisumi">
   <meta property="og:image" content="">
   <title>Arisumi Design</title>
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/public/assets/img/favicon.ico"
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/src/assets/img/favicon.ico"
     type="image/x-icon">
   <?php wp_head(); ?>
 </head>
@@ -24,7 +24,7 @@
     <div class="l-header">
       <div class="l-header__pc">
         <h1 class="l-header__logo"><a href="/"><img
-              src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Logo Design.svg"
+              src="<?php echo get_template_directory_uri(); ?>/src/assets/img/Logo Design.svg"
               alt="Arisumi Design logo"></a>
         </h1>
         <div class="l-header__nav">
@@ -51,17 +51,17 @@
             </a></div>
         </div>
         <div class="l-header__contact"><a href="/contact/" class="c-contact-button">
-            <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/email.svg" alt="">お問い合わせ</a>
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/email.svg" alt="">お問い合わせ</a>
         </div>
       </div>
     </div>
     <div class="l-header__sp">
       <h1 class="l-header__logo-sp"><a href="/"><img
-            src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Logo Design.svg"
+            src="<?php echo get_template_directory_uri(); ?>/src/assets/img/Logo Design.svg"
             alt="Arisumi Design logo"></a>
       </h1>
       <div class="l-header__contact-sp"><a href="/contact/" class="c-contact-button-sp">
-          <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/email.svg" alt=""><br></a>
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/email.svg" alt=""><br></a>
       </div>
     </div>
 
@@ -96,7 +96,7 @@
           </a></div>
       </div>
       <div class="l-drawer__contact-sp"><a href="/contact/" class="c-contact-button">
-          <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/email.svg" alt="">お問い合わせ</a></div>
+          <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/email.svg" alt="">お問い合わせ</a></div>
     </div>
   </header>
   <main>
