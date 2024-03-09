@@ -25,9 +25,9 @@
   &__logo {
     img {
       filter: g.$img-filter;
+      transition: all g.$transition;
 
       &:hover {
-        transition: all .4s;
         opacity: g.$opacity;
         filter: none;
       }

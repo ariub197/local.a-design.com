@@ -7,9 +7,9 @@
   background: g.$btn-color;
   width: 80%;
   margin: 0 auto;
+  transition: all g.$transition;
 
   &:hover {
-    transition: all .4s;
     background: g.$btn-hover;
   }
 }
@@ -20,12 +20,11 @@
   border: 1px solid g.$color-line;
   width: fit-content;
   background: #fff;
-  transition: all .4s;
+  transition: all g.$transition;
 
   &:hover {
     background: g.$btn-solid;
     color: #fff;
-    transition: all .4s;
   }
 }
 
@@ -37,22 +36,22 @@
   padding: 18px 20px 17px 5px;
   background: g.$header-background;
   box-shadow: g.$box-shadow;
+  transition: all g.$transition;
 
   img {
     width: 32px;
     height: auto;
     margin-right: 10px;
+    transition: all g.$transition;
+
+    &:hover {
+      filter: invert(100);
+    }
   }
 
   &:hover {
-    transition: all .4s;
     background: g.$btn-hover;
     color: #fff;
-
-    img {
-      filter: invert(100);
-      transition: all .4s;
-    }
   }
 }
 
@@ -65,11 +64,17 @@
   background: g.$header-background;
   box-shadow: g.$box-shadow;
   border-radius: 0 0 6px 6px;
+  transition: all g.$transition;
 
   img {
     width: 28px;
     height: auto;
     margin: 0 auto 3px;
+    transition: all g.$transition;
+
+    &:hover {
+      filter: invert(100);
+    }
   }
 
   &::after {
@@ -79,15 +84,10 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
   &:hover {
-    transition: all .4s;
     background: g.$btn-hover;
     color: #fff;
-
-    img {
-      filter: invert(100);
-      transition: all .4s;
-    }
   }
 
 }
@@ -114,19 +114,19 @@
   color: g.$color-text;
   background: #fff;
   z-index: 1;
+  transition: all g.$transition;
+
+  &:hover {
+    background: g.$btn-background;
+  }
 
   span {
     font-family: g.$font-en;
     padding: 3px 40px 3px 30px;
     @include g.font(20, 20, 0, 400);
-  }
+    transition: all g.$transition;
 
-  &:hover {
-    transition: all .4s;
-    background: g.$btn-background;
-
-    span {
-      transition: all .4s;
+    &:hover {
       color: #fff;
     }
   }
@@ -142,7 +142,6 @@
   border-radius: 50%;
   padding: 23px;
   z-index: map.get(g.$layer, pagetop);
-
   @include g.mq("sp") {
     width: 40px;
     height: 40px;

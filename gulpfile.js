@@ -6,7 +6,8 @@ const cssSorter = require("css-declaration-sorter");
 const mmq = require("gulp-merge-media-queries");
 const browserSync = require("browser-sync");
 const cleanCss = require("gulp-clean-css"); //cssの圧縮
-const concat   = require('gulp-concat');// concat
+const plumber = require('gulp-plumber');// エラーが起こってもタスクが停止しないようにするプラグイン
+const concat = require('gulp-concat');// concat
 const uglify = require("gulp-uglify"); //jsの圧縮
 const rename = require("gulp-rename");
 const htmlBeautify = require("gulp-html-beautify"); //htmlの整形
@@ -25,10 +26,10 @@ function compileSass() {
   .pipe(gulp.dest("./src/assets/css/"))
 }
 
-
 function watch(){
   gulp.watch("./src/assets/css/**/*.scss", gulp.series(compileSass, browserReload));//左から順に読み込まれる
-  gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload));
+  // gulp.watch("./src/assets/js/**/*.js", gulp.series(minJS, browserReload));
+  gulp.watch("./src/assets/js/**/*.js", browserReload);
   gulp.watch("./src/assets/img/**/*", gulp.series(copyImage, browserReload));
   gulp.watch("../**/*.php", browserReload);
 }
@@ -46,16 +47,16 @@ function browserReload(done) {
 }
 
 // concat
-gulp.task('js.concat', function () {
+function concatJS() {
   return gulp.src('./src/assets/js/*.js')
-  .pipe(plumber())
+  // .pipe(plumber())
   .pipe(concat('concat.js'))
   .pipe(gulp.dest('./src/assets/js'));
-});
+};
 
 //jsコンパイル
 function minJS() {
-  return gulp.src("./src/assets/js/*.js")
+  return gulp.src("./src/assets/js/concat.js")
   .pipe(gulp.dest("./src/assets/js"))
   .pipe(uglify())
   .pipe(rename({
@@ -80,11 +81,8 @@ function copyImage() {
   .pipe(gulp.dest("./src/assets/img/"))
 }
 
-exports.compileSass = compileSass;
-exports.watch = watch;
-exports.browserInit = browserInit;
-exports.concat = concat;
-exports.dev = gulp.parallel(compileSass, browserInit, concat, watch);
+exports.dev = gulp.parallel(compileSass, browserInit, watch);
 exports.minJS = minJS;
 exports.formatHTML = formatHTML;
-exports.build = gulp.parallel(formatHTML, minJS, compileSass, copyImage)
+exports.build = gulp.parallel(formatHTML, minJS, compileSass, copyImage);
+exports.run = gulp.parallel(compileSass, browserInit, concatJS, watch);

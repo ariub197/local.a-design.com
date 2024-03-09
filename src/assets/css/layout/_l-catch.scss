@@ -29,15 +29,14 @@
       .c-catch__phrase span::before,
       .c-catch__phrase span::after {
         background: g.$color-accent;
-        transition: all .4s;
+        transition: all g.$transition;
       }
       .c-catch__phrase-accent {
         color: g.$color-accent;
-        transition: all .4s;
+        transition: all g.$transition;
       }
       .l-text-accent::after {
         background: g.$color-accent;
-        transition: all .4s;
       }
     }
   }

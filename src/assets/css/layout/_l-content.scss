@@ -29,8 +29,7 @@
     left: 0;
     background: g.$color-background;
     z-index: -1;
-    transition: all .4s;
-
+    transition: all g.$transition;
     @include g.mq("sp") {
       background: g.$color-accent;
     }

@@ -1,3 +1,7 @@
+/*==========================================================
+foundation
+==========================================================*/
+
 *,
 *::before,
 *::after {
@@ -301,9 +305,9 @@ summary {
 }
 
 .swiper-css-mode > .swiper-wrapper {
-	-ms-overflow-style: none;
 	overflow: auto;
 	scrollbar-width: none;
+	-ms-overflow-style: none;
 }
 
 .swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
@@ -329,7 +333,6 @@ summary {
 }
 
 .swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
-	-webkit-margin-start: var(--swiper-centered-offset-before);
 	margin-inline-start: var(--swiper-centered-offset-before);
 }
 
@@ -340,7 +343,6 @@ summary {
 }
 
 .swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
-	-webkit-margin-before: var(--swiper-centered-offset-before);
 	margin-block-start: var(--swiper-centered-offset-before);
 }
 
@@ -522,13 +524,13 @@ summary {
 }
 
 button.swiper-pagination-bullet {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 	border: none;
 	box-shadow: none;
 	margin: 0;
 	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -636,10 +638,10 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-scrollbar {
-	-ms-touch-action: none;
-	background: rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
 	position: relative;
+	-ms-touch-action: none;
+	background: rgba(0, 0, 0, 0.1);
 }
 
 .swiper-scrollbar-disabled > .swiper-scrollbar,
@@ -697,9 +699,9 @@ button.swiper-pagination-bullet {
 .swiper-zoom-container > canvas,
 .swiper-zoom-container > img,
 .swiper-zoom-container > svg {
-	-o-object-fit: contain;
 	max-height: 100%;
 	max-width: 100%;
+	-o-object-fit: contain;
 	object-fit: contain;
 }
 
@@ -1198,6 +1200,10 @@ a {
 	text-decoration: none;
 }
 
+/*==========================================================
+layout
+==========================================================*/
+
 .l-footer {
 	background: #333;
 }
@@ -1221,12 +1227,12 @@ a {
 
 .l-header__logo img {
 	filter: grayscale(100%) contrast(80%);
+	transition: all 0.4s;
 }
 
 .l-header__logo img:hover {
 	filter: none;
 	opacity: 0.6;
-	transition: all 0.4s;
 }
 
 .l-header__nav {
@@ -1294,7 +1300,6 @@ a {
 
 .l-catch__phrase:hover .l-text-accent::after {
 	background: #F7B97D;
-	transition: all 0.4s;
 }
 
 .l-catch__body {
@@ -1359,6 +1364,10 @@ a {
 	width: 67%;
 }
 
+/*==========================================================
+component
+==========================================================*/
+
 .c-drawer-icon {
 	background: #F7B97D;
 	border-radius: 0 0 0 6px;
@@ -1369,7 +1378,7 @@ a {
 	position: fixed;
 	right: 0;
 	top: 0;
-	transition: transform 0.5s ease 0s;
+	transition: transform 0.4s ease 0s;
 	width: 50px;
 	z-index: 40;
 }
@@ -1593,7 +1602,6 @@ a {
 
 .c-content__body:hover .l-text-accent::after {
 	background: #F7B97D;
-	transition: all 0.4s;
 }
 
 .c-content__list-item {
@@ -1647,6 +1655,7 @@ a {
 	letter-spacing: 0em;
 	line-height: 1;
 	padding: 10px;
+	transition: all 0.4s;
 }
 
 .c-header__nav-item span {
@@ -1677,19 +1686,26 @@ a {
 	padding: 10px;
 }
 
+.c-header__sns-link--twitter .fa-twitter {
+	transition: all 0.4s;
+}
+
 .c-header__sns-link--twitter:hover .fa-twitter {
 	color: rgb(29, 155, 240);
-	transition: all 0.4s;
 }
 
 .c-header__sns-link--github {
 	padding: 10px;
 }
 
+.c-header__sns-link--github .octicon-mark-github {
+	border: 0.5px solid #000;
+	transition: all 0.4s;
+}
+
 .c-header__sns-link--github:hover .octicon-mark-github {
 	fill: #fff;
 	background: #24292f;
-	transition: all 0.4s;
 }
 
 .github-box {
@@ -1789,30 +1805,34 @@ a {
 
 .c-catch__body:hover .l-text-accent::after {
 	background: #F7B97D;
-	transition: all 0.4s;
 }
 
-.c-work__card-img {
+.c-work-card__img {
+	aspect-ratio: 1.56/1;
 	filter: grayscale(100%) contrast(80%);
 	overflow: hidden;
+	transition: all 0.4s;
 	width: 100%;
 }
 
-.c-work__card-item {
-	position: relative;
-}
-
-.c-work__card-item:hover .c-work__card-img {
+.c-work-card__img:hover {
 	filter: none;
+}
+
+.c-work-card__img img {
 	transition: all 0.4s;
 }
 
-.c-work__card-item:hover .c-work__card-img img {
+.c-work-card__img img:hover {
 	transform: scale(1.1, 1.1);
+}
+
+.c-work-card__item {
+	position: relative;
 	transition: all 0.4s;
 }
 
-.c-work__card-tag {
+.c-work-card__tag {
 	background: #fff;
 	border: 1px solid #333;
 	border-radius: 50px;
@@ -1827,7 +1847,7 @@ a {
 	z-index: 1;
 }
 
-.c-work__card-link {
+.c-work-card__link {
 	display: flex;
 	font-size: 12px;
 	margin-left: auto;
@@ -1837,7 +1857,7 @@ a {
 	width: fit-content;
 }
 
-.c-work__card-link i {
+.c-work-card__link i {
 	margin-right: 5px;
 }
 
@@ -1879,12 +1899,12 @@ a {
 	box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
 	color: #333;
 	margin: 0 auto;
+	transition: all 0.4s;
 	width: 80%;
 }
 
 .c-button-contact:hover {
 	background: #F7B97D;
-	transition: all 0.4s;
 }
 
 .c-button-contact-profile {
@@ -1900,7 +1920,6 @@ a {
 .c-button-contact-profile:hover {
 	background: #333;
 	color: #fff;
-	transition: all 0.4s;
 }
 
 .c-contact-button {
@@ -1910,24 +1929,24 @@ a {
 	display: flex;
 	justify-content: center;
 	padding: 18px 20px 17px 5px;
+	transition: all 0.4s;
 	width: 100%;
 }
 
 .c-contact-button img {
 	height: auto;
 	margin-right: 10px;
+	transition: all 0.4s;
 	width: 32px;
+}
+
+.c-contact-button img:hover {
+	filter: invert(100);
 }
 
 .c-contact-button:hover {
 	background: #F7B97D;
 	color: #fff;
-	transition: all 0.4s;
-}
-
-.c-contact-button:hover img {
-	filter: invert(100);
-	transition: all 0.4s;
 }
 
 .c-contact-button-sp {
@@ -1938,13 +1957,19 @@ a {
 	display: flex;
 	padding: 5px 5px 12px;
 	position: relative;
+	transition: all 0.4s;
 	width: 100%;
 }
 
 .c-contact-button-sp img {
 	height: auto;
 	margin: 0 auto 3px;
+	transition: all 0.4s;
 	width: 28px;
+}
+
+.c-contact-button-sp img:hover {
+	filter: invert(100);
 }
 
 .c-contact-button-sp::after {
@@ -1958,35 +1983,34 @@ a {
 .c-contact-button-sp:hover {
 	background: #F7B97D;
 	color: #fff;
-	transition: all 0.4s;
-}
-
-.c-contact-button-sp:hover img {
-	filter: invert(100);
-	transition: all 0.4s;
 }
 
 .c-content-button {
-	-webkit-clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
-	background: #757575;
-	clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
 	height: 30px;
 	margin-left: auto;
 	margin-top: 40px;
 	width: 120px;
+	-webkit-clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+	background: #757575;
+	clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
 	z-index: -1;
 }
 
 .c-button-more {
-	-webkit-clip-path: polygon(1px 1px, calc(90% - 0.5px) 1px, calc(100% - 1.5px) 50%, calc(90% - 0.5px) calc(100% - 1px), 1px calc(100% - 1px));
 	align-items: center;
-	background: #fff;
-	clip-path: polygon(1px 1px, calc(90% - 0.5px) 1px, calc(100% - 1.5px) 50%, calc(90% - 0.5px) calc(100% - 1px), 1px calc(100% - 1px));
-	color: #333333;
 	display: flex;
 	height: inherit;
 	width: inherit;
+	-webkit-clip-path: polygon(1px 1px, calc(90% - 0.5px) 1px, calc(100% - 1.5px) 50%, calc(90% - 0.5px) calc(100% - 1px), 1px calc(100% - 1px));
+	background: #fff;
+	clip-path: polygon(1px 1px, calc(90% - 0.5px) 1px, calc(100% - 1.5px) 50%, calc(90% - 0.5px) calc(100% - 1px), 1px calc(100% - 1px));
+	color: #333333;
+	transition: all 0.4s;
 	z-index: 1;
+}
+
+.c-button-more:hover {
+	background: #757575;
 }
 
 .c-button-more span {
@@ -1996,16 +2020,11 @@ a {
 	letter-spacing: 0em;
 	line-height: 1;
 	padding: 3px 40px 3px 30px;
-}
-
-.c-button-more:hover {
-	background: #757575;
 	transition: all 0.4s;
 }
 
-.c-button-more:hover span {
+.c-button-more span:hover {
 	color: #fff;
-	transition: all 0.4s;
 }
 
 #c-pagetop {
@@ -2133,17 +2152,16 @@ a {
 #mw_wp_form_mw-wp-form-35 input[type=submit]:hover {
 	background: #fff;
 	color: #333;
-	transition: all 0.4s;
 }
 
 #mw_wp_form_mw-wp-form-35 input[type=radio] {
+	position: relative;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	border: 1px solid #595757;
 	border-radius: 50%;
 	height: 16px;
-	position: relative;
 	width: 16px;
 }
 
@@ -2160,26 +2178,26 @@ a {
 }
 
 #mw_wp_form_mw-wp-form-35 input[type=checkbox] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 	background-color: #fff;
 	border: 1px solid #595757;
 	height: 20px;
-	margin: -3px 15px 0 0;
 	width: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: -3px 15px 0 0;
 }
 
 #mw_wp_form_mw-wp-form-35 input[type=checkbox]:checked::before {
-	-webkit-mask: url(../img/check-box.svg) no-repeat center center/cover;
-	background-color: #F7B97D;
 	content: "";
 	display: block;
 	height: 18px;
+	width: 18px;
+	-webkit-mask: url(../img/check-box.svg) no-repeat center center/cover;
+	background-color: #F7B97D;
 	left: 0;
 	mask: url(../img/check-box.svg) no-repeat center center/cover;
 	top: 0;
-	width: 18px;
 }
 
 .c-form__title {
@@ -2257,6 +2275,10 @@ a {
 	-o-object-fit: contain;
 	object-fit: contain;
 }
+
+/*==========================================================
+project
+==========================================================*/
 
 .p-error-page {
 	font-size: 8rem;
@@ -2435,6 +2457,10 @@ a {
 	margin-bottom: 40px;
 }
 
+/*==========================================================
+utility
+==========================================================*/
+
 /* color
 ----------------------------------------------------------------- */
 
@@ -2521,11 +2547,11 @@ a {
 }
 
 .u-font--clamp-second {
-	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	display: -webkit-box;
 	overflow: hidden;
 	word-break: break-all;
+	-webkit-box-orient: vertical;
 }
 
 /* cursor
@@ -3073,26 +3099,6 @@ a {
 /* highlight
 ----------------------------------------------------------------- */
 
-/*==========================================================
-foundation
-==========================================================*/
-
-/*==========================================================
-layout
-==========================================================*/
-
-/*==========================================================
-component
-==========================================================*/
-
-/*==========================================================
-project
-==========================================================*/
-
-/*==========================================================
-utility
-==========================================================*/
-
 @media (min-width: 1081px) {
 
 .u-link:hover,
@@ -3575,7 +3581,7 @@ main {
 	width: 100%;
 }
 
-.c-work__card-img {
+.c-work-card__img {
 	filter: none;
 }
 

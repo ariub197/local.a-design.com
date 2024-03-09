@@ -29,7 +29,7 @@
     span {
       position: relative;
       z-index: -1;
-      transition: all .4s;
+      transition: all g.$transition;
 
       &::before {
         position: absolute;
@@ -68,7 +68,7 @@
     @include g.font(38, 38, 0, 700);
     padding-left: 29px;
     color: g.$text-accent;
-    transition: all .4s;
+    transition: all g.$transition;
 
     @include g.mq("sp") {
       color: g.$color-accent;
@@ -100,7 +100,6 @@
     &:hover {
       .l-text-accent::after {
         background: g.$color-accent;
-        transition: all .4s;
       }
     }
     @media (max-width: 870px) {

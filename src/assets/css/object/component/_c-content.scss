@@ -97,7 +97,6 @@
     &:hover {
       .l-text-accent::after {
         background: g.$color-accent;
-        transition: all .4s;
       }
     }
   }
@@ -109,6 +108,7 @@
     &:not(:first-child) {
       margin-top: 10px;
     }
+
     &::before {
       position: absolute;
       content: "";
@@ -124,7 +124,6 @@
   &__img {
     width: 80%;
     margin: 100px 0 120px;
-
     @include g.mq("sp") {
       margin: 50px 0 80px;
       width: 100%;
@@ -146,7 +145,6 @@
   right: 20px;
   z-index: -1;
   writing-mode: vertical-lr;
-
   @include g.mq("sp") {
     display: none;
   }

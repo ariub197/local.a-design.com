@@ -16,16 +16,16 @@
       <?php while (have_posts()) : ?>
       <?php the_post(); ?>
       <div class="l-work__card">
-        <a href="<?php the_permalink(); ?>" class="c-work__card-item">
-          <div class="c-work__card-img">
+        <a href="<?php the_permalink(); ?>" class="c-work-card__item">
+          <div class="c-work-card__img">
             <?php if(has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>
             <?php else: ?>
             <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/No_image.png" alt="">
             <?php endif; ?>
           </div>
-          <div class="c-work__card-tag"><?php my_the_post_category(false); ?></div>
-          <div class="c-work__card-link">
+          <div class="c-work-card__tag"><?php my_the_post_category(false); ?></div>
+          <div class="c-work-card__link">
             <i class="fas fa-external-link"></i>
             <?php echo wp_trim_words( get_field('work_url'), 27, '...' ); ?>
           </div>

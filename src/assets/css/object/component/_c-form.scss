@@ -50,7 +50,7 @@
     background-color: g.$btn-solid;
     color: #fff;
     margin-top: 40px;
-    transition: all 0.4s;
+    transition: all g.$transition;
 
     @include g.mq("sp") {
       padding: 20px;
@@ -59,7 +59,6 @@
     &:hover {
       background: #fff;
       color: g.$color-main;
-      transition: all 0.4s;
     }
   }
 

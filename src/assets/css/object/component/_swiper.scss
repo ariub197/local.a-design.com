@@ -19,11 +19,11 @@
   height: auto;
   overflow: hidden;
   transition: filter 0.8s;
+  @include g.mq("sp") {
+    filter: none;
+  }
 
   img {
     object-fit: contain;
-  }
-  @include g.mq("sp") {
-    filter: none;
   }
 }

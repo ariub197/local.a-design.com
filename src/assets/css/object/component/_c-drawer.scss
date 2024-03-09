@@ -12,7 +12,7 @@
   display: none;
   border-radius: 0 0 0 6px;
   background: g.$drawer-menu;
-  transition: transform 0.5s ease 0s;
+  transition: transform g.$transition ease 0s;
   color: #fff;
 
   @include g.mq("sp") {
@@ -30,21 +30,21 @@
   }
 
   &.is-active {
-    transition: all .4s;
+    transition: all g.$transition;
 
     .c-drawer-icon__bars span {
       &:nth-child(1) {
         transform: rotate(-45deg);
-        transition: all .4s;
+        transition: all g.$transition;
         top: 8px;
       }
       &:nth-child(2) {
         display: none;
-        transition: all .4s;
+        transition: all g.$transition;
       }
       &:nth-child(3) {
         transform: rotate(45deg);
-        transition: all .4s;
+        transition: all g.$transition;
         top: 8px;
       }
     }
@@ -67,16 +67,16 @@
 
       &:nth-child(1) {
         top: 0;
-        transition: all .4s;
+        transition: all g.$transition;
       }
       &:nth-child(2) {
         top: 8px;
-        transition: all .4s;
+        transition: all g.$transition;
         animation: line-ToRight .7s ease both;
       }
       &:nth-child(3) {
         top: 16px;
-        transition: all .4s;
+        transition: all g.$transition;
       }
     }
   }
@@ -107,7 +107,7 @@
 
   &.is-active {
     transform: translateY(0%);
-    transition: all .4s;
+    transition: all g.$transition;
   }
   &__item {
     text-align: center;
