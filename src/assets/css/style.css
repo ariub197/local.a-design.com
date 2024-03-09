@@ -2276,9 +2276,19 @@ component
 	object-fit: contain;
 }
 
-/*  cursor */
+#cursor {
+	background-color: #000;
+	border-radius: 50%;
+	height: 8px;
+	left: -4px;
+	pointer-events: none;
+	position: absolute;
+	top: -4px;
+	width: 8px;
+	z-index: 1001;
+}
 
-.stalker {
+#cursor__stalker {
 	background: rgba(253, 254, 0, 0.5);
 	border-radius: 50%;
 	height: 40px;
@@ -2293,20 +2303,8 @@ component
 	z-index: 999;
 }
 
-.stalker.is-active {
+#cursor__stalker.is-active {
 	transform: scale(3);
-}
-
-.stalker__cursor {
-	background-color: #000;
-	border-radius: 50%;
-	height: 8px;
-	left: -4px;
-	pointer-events: none;
-	position: fixed;
-	top: -4px;
-	width: 8px;
-	z-index: 1001;
 }
 
 .btn {
