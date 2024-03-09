@@ -2282,7 +2282,7 @@ component
 	height: 8px;
 	left: -4px;
 	pointer-events: none;
-	position: absolute;
+	position: fixed;
 	top: -4px;
 	width: 8px;
 	z-index: 1001;
