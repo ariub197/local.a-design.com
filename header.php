@@ -20,7 +20,6 @@
 </head>
 
 <body>
-  <div id="stalker"></div>
   <header id="header">
     <div class="l-header">
       <div class="l-header__pc">

@@ -2276,29 +2276,6 @@ component
 	object-fit: contain;
 }
 
-#stalker {
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 50%;
-	height: 16px;
-	left: -8px;
-	pointer-events: none;
-	position: fixed;
-	top: -8px;
-	transition: transform 0.2s, top, 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s;
-	transition-timing-function: ease-out;
-	width: 16px;
-	z-index: 999;
-}
-
-#stalker.hov_ {
-	background: rgba(255, 0, 0, 0.4);
-	height: 64px;
-	left: -32px;
-	top: -32px;
-	transition: 0.5s;
-	width: 64px;
-}
-
 /*==========================================================
 project
 ==========================================================*/

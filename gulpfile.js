@@ -48,7 +48,7 @@ function browserReload(done) {
 
 // concat
 function concatJS() {
-  return gulp.src('./src/assets/js/**/*.js')
+  return gulp.src('./src/assets/js/*.js')
   // .pipe(plumber())
   .pipe(concat('concat.js'))
   .pipe(gulp.dest('./src/assets/js'));
