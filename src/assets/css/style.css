@@ -1172,6 +1172,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ----------------------------------------------------------------- */
 
 html {
+	cursor: none;
 	font-size: 16px;
 }
 
@@ -1232,7 +1233,6 @@ layout
 
 .l-header__logo img:hover {
 	filter: none;
-	opacity: 0.6;
 }
 
 .l-header__nav {
@@ -2276,19 +2276,53 @@ component
 	object-fit: contain;
 }
 
-#stalker {
-	background: rgba(0, 0, 0, 0.5);
+#cursor {
+	background-color: #000;
 	border-radius: 50%;
-	height: 16px;
-	left: -8px;
+	height: 8px;
+	left: -4px;
+	pointer-events: none;
+	position: absolute;
+	top: -4px;
+	width: 8px;
+	z-index: 1001;
+}
+
+#cursor__stalker {
+	background: rgba(253, 254, 0, 0.5);
+	border-radius: 50%;
+	height: 40px;
+	left: -20px;
 	pointer-events: none;
 	position: fixed;
-	top: -8px;
-	transform: translate(0, 0);
+	top: -20px;
+	transform: translate(-50%, -50%);
 	transition: transform 0.2s;
 	transition-timing-function: ease-out;
-	width: 16px;
+	width: 40px;
 	z-index: 999;
+}
+
+#cursor__stalker.is-active {
+	transform: scale(3);
+}
+
+.btn {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1;
+	margin: 16px;
+	text-align: center;
+	width: 160px;
+}
+
+.btn a {
+	background-color: #000;
+	color: #fff;
+	cursor: none;
+	display: block;
+	padding: 16px;
+	text-decoration: none;
 }
 
 /*==========================================================

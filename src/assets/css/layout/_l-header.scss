@@ -28,7 +28,6 @@
       transition: all g.$transition;
 
       &:hover {
-        opacity: g.$opacity;
         filter: none;
       }
       @include g.mq("sp") {
