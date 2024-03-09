@@ -1,6 +1,6 @@
 //マウスストーカー用のdivを取得
-const stalker = document.getElementById("cursor__stalker");
-const cursor = document.getElementById("cursor");
+const stalker = document.getElementsByClassName("stalker");
+const cursor = document.getElementsByClassName("stalker__cursor");
 //上記のdivタグをマウスに追従させる処理
 document.addEventListener("mousemove", function (e) {
   stalker.style.transform =
