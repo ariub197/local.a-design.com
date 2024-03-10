@@ -13,7 +13,7 @@
         </div>
         <div class="c-footer__address">
           <p class="c-footer__name">所在地</p>
-          <p class="c-footer__text">東京都大田区<br>
+          <p class="c-footer__text">東京都大田区<br>
             <span>（詳細はご契約時にお伝えいたします。）</span>
           </p>
         </div>

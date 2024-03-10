@@ -48,9 +48,34 @@ function browserReload(done) {
 
 // concat
 function concatJS() {
-  return gulp.src('./src/assets/js/*.js')
+  return gulp.src([
+    './src/assets/js/common/desvg.js',
+    './src/assets/js/common/tooltip.js',
+    './src/assets/js/common/modal.js',
+    './src/assets/js/common/stalker.js',
+    './src/assets/js/common/script.js'
+  ])
   // .pipe(plumber())
-  .pipe(concat('concat.js'))
+  .pipe(concat('common.js'))
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: ".min"
+  }))
+  .pipe(gulp.dest('./src/assets/js'));
+};
+
+function concatPlugin() {
+  return gulp.src([
+    './src/assets/js/plugin/swiper.min.js',
+    './src/assets/js/plugin/desvg.js',
+    './src/assets/js/plugin/tippy-bundle.umd.min.js'
+  ])
+  // .pipe(plumber())
+  .pipe(concat('plugins.js'))
+  .pipe(uglify())
+  .pipe(rename({
+    suffix: ".min"
+  }))
   .pipe(gulp.dest('./src/assets/js'));
 };
 
@@ -85,4 +110,4 @@ exports.dev = gulp.parallel(compileSass, browserInit, watch);
 exports.minJS = minJS;
 exports.formatHTML = formatHTML;
 exports.build = gulp.parallel(formatHTML, minJS, compileSass, copyImage);
-exports.run = gulp.parallel(compileSass, browserInit, concatJS, watch);
+exports.run = gulp.parallel(compileSass, browserInit, concatJS, concatPlugin, watch);

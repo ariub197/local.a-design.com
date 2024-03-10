@@ -12,7 +12,8 @@ add_action("after_setup_theme", "my_setup");
 function my_script_init() {
   wp_enqueue_style("font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css", array(), "6.4.0", "all");
   wp_enqueue_style("my", get_template_directory_uri() . "/src/assets/css/style.css", array(), filemtime(get_theme_file_path('/src/assets/css/style.min.css')), "all");
-  wp_enqueue_script("my", get_template_directory_uri() . "/src/assets/js/concat.js", array("jquery"), filemtime(get_theme_file_path('/src/assets/js/concat.js')), true);
+  wp_enqueue_script("my-plugins", get_template_directory_uri() . "/src/assets/js/plugins.min.js", array(), filemtime(get_theme_file_path('/src/assets/js/plugins.min.js')), true);
+  wp_enqueue_script("my-script", get_template_directory_uri() . "/src/assets/js/concat.js", array("jquery"), filemtime(get_theme_file_path('/src/assets/js/concat.js')), true);
 }
 add_action("wp_enqueue_scripts", "my_script_init");
 
