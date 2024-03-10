@@ -21,6 +21,8 @@
     transform: translate(-50%, -50%);
     transition: transform 0.2s; //ちょっと遅れてついてくるように
     transition-timing-function: ease-out;
+    transition: transform 0.2s, top, 0.5s, left 0.5s, width .5s, height .5s, background-color .5s;
+    transition-timing-function: ease-out;
     z-index: 999;
 
     &.is-active {
@@ -28,23 +30,14 @@
       // background-color: #fff; /* 色を反転させるのに必要 */
       //  mix-blend-mode: difference; /* 色を反転 */
     }
-  }
-}
 
-.btn {
-  display: inline-block;
-  width: 160px;
-  margin: 16px;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1;
-
-  a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 16px;
-    background-color: #000;
-    cursor: none;
+    &.hov_{
+      top: -32px;     //大きさに合わせて座標調節
+      left: -32px;    //大きさに合わせて座標調節
+      width: 64px;
+      height: 64px;
+      transition: .5s;
+      background: rgba(255, 0, 0, 0.4);
+    }
   }
 }
