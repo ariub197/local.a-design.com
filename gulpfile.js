@@ -49,10 +49,12 @@ function browserReload(done) {
 // concat
 function concatJS() {
   return gulp.src([
+    './src/assets/js/common/font.js',
     './src/assets/js/common/desvg.js',
     './src/assets/js/common/tooltip.js',
     './src/assets/js/common/modal.js',
     './src/assets/js/common/stalker.js',
+    './src/assets/js/common/swiper.js',
     './src/assets/js/common/script.js'
   ])
   // .pipe(plumber())
@@ -66,6 +68,7 @@ function concatJS() {
 
 function concatPlugin() {
   return gulp.src([
+    './src/assets/js/plugin/jquery.min.js',
     './src/assets/js/plugin/swiper.min.js',
     './src/assets/js/plugin/desvg.js',
     './src/assets/js/plugin/tippy-bundle.umd.min.js'

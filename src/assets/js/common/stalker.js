@@ -1,4 +1,8 @@
-//マウスストーカー用のdivを取得
+/*--------------------------------------------------------------------------*
+ *
+ *  stalker
+ *
+ *--------------------------------------------------------------------------*/
 const stalker = document.getElementById("cursor__stalker");
 const cursor = document.getElementById("cursor");
 //上記のdivタグをマウスに追従させる処理

@@ -25,10 +25,6 @@
 </main>
 <a id="c-pagetop" href="#"><i class="fa-solid fa-angles-up"></i></a>
 
-<!-- swiper -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- jquery & iScroll -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"
   integrity="sha512-wstvQlySDtT//3yKfbxpy8AS5b4UQ0tnItav8dGCVLGO3u/Ymb6mUEgVzDL8a/DXdtiuhsTj2ElDsXQ+E2cDYA=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
