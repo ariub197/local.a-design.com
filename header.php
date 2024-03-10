@@ -20,8 +20,8 @@
 </head>
 
 <body>
-  <div id="cursor"></div>
-  <div id="cursor__stalker"></div>
+  <div id="pointer"></div>
+  <div id="pointer__stalker"></div>
   <header id="header">
     <div class="l-header">
       <div class="l-header__pc">
