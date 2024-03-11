@@ -1259,6 +1259,7 @@ layout
 }
 
 .l-header__logo-sp {
+	filter: drop-shadow(2px 4px 6px #fff);
 	width: 208px;
 }
 
@@ -1930,21 +1931,11 @@ component
 	background: #fff;
 	box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
 	display: flex;
+	gap: 10px;
 	justify-content: center;
 	padding: 18px 20px 17px 5px;
 	transition: all 0.4s;
 	width: 100%;
-}
-
-.c-contact-button img {
-	height: auto;
-	margin-right: 10px;
-	transition: all 0.4s;
-	width: 32px;
-}
-
-.c-contact-button img:hover {
-	filter: invert(100);
 }
 
 .c-contact-button:hover {
@@ -1952,40 +1943,46 @@ component
 	color: #fff;
 }
 
-.c-contact-button-sp {
+.c-contact-button:hover svg {
+	fill: #fff;
+}
+
+.c-contact-button svg {
+	transition: all 0.4s;
+}
+
+.c-contact-button__sp {
 	align-items: center;
 	background: #fff;
 	border-radius: 0 0 6px 6px;
-	box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 	display: flex;
-	padding: 5px 5px 12px;
+	padding: 5px 5px 15px;
 	position: relative;
 	transition: all 0.4s;
 	width: 100%;
 }
 
-.c-contact-button-sp img {
-	height: auto;
-	margin: 0 auto 3px;
+.c-contact-button__sp svg {
+	margin: 0 auto;
 	transition: all 0.4s;
-	width: 28px;
 }
 
-.c-contact-button-sp img:hover {
-	filter: invert(100);
-}
-
-.c-contact-button-sp::after {
-	bottom: 0;
+.c-contact-button__sp::after {
+	bottom: 4px;
 	content: "Contact";
 	left: 50%;
 	position: absolute;
 	transform: translateX(-50%);
 }
 
-.c-contact-button-sp:hover {
+.c-contact-button__sp:hover {
 	background: #F7B97D;
 	color: #fff;
+}
+
+.c-contact-button__sp:hover svg {
+	fill: #fff;
 }
 
 .c-content-button {
@@ -2039,8 +2036,18 @@ component
 	padding: 23px;
 	position: fixed;
 	right: 40px;
+	transition: 0.4s;
 	width: 60px;
 	z-index: 30;
+}
+
+#c-pagetop:hover {
+	animation-duration: 3s;
+	scale: 1.1;
+}
+
+#c-pagetop:hover::after {
+	animation-duration: 3s;
 }
 
 #c-pagetop::after {
@@ -2303,7 +2310,7 @@ component
 }
 
 #pointer__stalker {
-	background: rgba(253, 254, 0, 0.5);
+	background: rgba(184, 184, 184, 0.5);
 	border-radius: 50%;
 	height: 40px;
 	left: -20px;
@@ -2324,7 +2331,7 @@ component
 }
 
 #pointer__stalker.hov_ {
-	background: rgba(255, 0, 0, 0.4);
+	background: rgba(253, 254, 0, 0.5);
 	height: 64px;
 	left: -32px;
 	top: -32px;
@@ -3532,6 +3539,7 @@ main {
 
 .l-header__sp {
 	display: flex;
+	top: 4px;
 }
 
 .l-inner {
@@ -3726,6 +3734,14 @@ main {
 	filter: none;
 }
 
+#pointer {
+	display: none;
+}
+
+#pointer__stalker {
+	display: none;
+}
+
 .p-error-page {
 	margin-top: 150px;
 }
@@ -3736,6 +3752,11 @@ main {
 
 .p-price__table {
 	width: 100%;
+}
+
+.p-price__table th,
+.p-price__table td {
+	padding-inline: 10px;
 }
 
 .p-works__title {

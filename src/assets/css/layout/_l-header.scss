@@ -10,7 +10,6 @@
   padding: 50px 20px;
   z-index: map.get(g.$layer, header);
   box-shadow: g.$header-shadow;
-
   @include g.mq("sp") {
     display: none;
     padding: 0px;
@@ -35,6 +34,7 @@
       }
     }
   }
+
   &__nav {
     padding-left: 0.8rem;
     margin-top: 100px;
@@ -56,11 +56,13 @@
   z-index: map.get(g.$layer, header);
   @include g.mq("sp") {
     display: flex;
+    top: 4px;
   }
 }
 
 .l-header__logo-sp {
   width: 208px;
+  filter: drop-shadow(2px 4px 6px g.$white);
 }
 
 .l-header__contact-sp {

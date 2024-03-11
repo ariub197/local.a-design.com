@@ -32,6 +32,7 @@ for (let i = 0; i < linkElem.length; i++) {
 
     //マウスストーカーにクラスをつける
     stalker.classList.add("hov_");
+    pointer.style.display = 'none';
 
     //マウスストーカーの位置をリンクの中心に固定
     let rect = e.target.getBoundingClientRect();
@@ -44,5 +45,6 @@ for (let i = 0; i < linkElem.length; i++) {
   linkElem[i].addEventListener("mouseout", function (e) {
     hovFlag = false;
     stalker.classList.remove("hov_");
+    pointer.style.display = 'block';
   });
 }

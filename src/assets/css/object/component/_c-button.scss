@@ -19,12 +19,12 @@
   padding: 25px 50px;
   border: 1px solid g.$color-line;
   width: fit-content;
-  background: #fff;
+  background: g.$white;
   transition: all g.$transition;
 
   &:hover {
     background: g.$btn-solid;
-    color: #fff;
+    color: g.$white;
   }
 }
 
@@ -37,59 +37,54 @@
   background: g.$header-background;
   box-shadow: g.$box-shadow;
   transition: all g.$transition;
-
-  img {
-    width: 32px;
-    height: auto;
-    margin-right: 10px;
-    transition: all g.$transition;
-
-    &:hover {
-      filter: invert(100);
-    }
-  }
+  gap: 10px;
 
   &:hover {
     background: g.$btn-hover;
-    color: #fff;
-  }
-}
+    color: g.$white;
 
-.c-contact-button-sp {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 5px 5px 12px;
-  background: g.$header-background;
-  box-shadow: g.$box-shadow;
-  border-radius: 0 0 6px 6px;
-  transition: all g.$transition;
-
-  img {
-    width: 28px;
-    height: auto;
-    margin: 0 auto 3px;
-    transition: all g.$transition;
-
-    &:hover {
-      filter: invert(100);
+    svg {
+      fill: g.$white;
     }
   }
 
-  &::after {
-    position: absolute;
-    content: "Contact";
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  svg {
+    transition: all g.$transition;
   }
 
-  &:hover {
-    background: g.$btn-hover;
-    color: #fff;
-  }
+  &__sp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 5px 15px;
+    background: g.$header-background;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 6px 6px;
+    transition: all g.$transition;
 
+    svg {
+      margin: 0 auto;
+      transition: all g.$transition;
+    }
+
+    &::after {
+      position: absolute;
+      content: "Contact";
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      background: g.$btn-hover;
+      color: g.$white;
+
+      svg {
+        fill: g.$white;
+      }
+    }
+  }
 }
 
 .c-content-button {
@@ -110,9 +105,15 @@
   align-items: center;
   width: inherit;
   height: inherit;
-  clip-path: polygon(1px 1px, calc(90% - 0.5px) 1px, calc(100% - 1.5px) 50%, calc(90% - 0.5px) calc(100% - 1px), 1px calc(100% - 1px));
+  clip-path: polygon(
+    1px 1px,
+    calc(90% - 0.5px) 1px,
+    calc(100% - 1.5px) 50%,
+    calc(90% - 0.5px) calc(100% - 1px),
+    1px calc(100% - 1px)
+  );
   color: g.$color-text;
-  background: #fff;
+  background: g.$white;
   z-index: 1;
   transition: all g.$transition;
 
@@ -127,7 +128,7 @@
     transition: all g.$transition;
 
     &:hover {
-      color: #fff;
+      color: g.$white;
     }
   }
 }
@@ -143,12 +144,22 @@
   z-index: map.get(g.$layer, pagetop);
   mix-blend-mode: difference;
   animation: border-transform 7s linear infinite;
+  transition: g.$transition;
   @include g.mq("sp") {
     width: 40px;
     height: 40px;
     bottom: 20px;
     right: 20px;
     padding: 13px 14px;
+  }
+
+  &:hover {
+    scale: 1.1;
+    animation-duration: 3s;
+
+    &::after {
+      animation-duration: 3s;
+    }
   }
 
   &::after {

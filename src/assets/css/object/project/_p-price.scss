@@ -4,7 +4,6 @@
   border-collapse: collapse;
   table-layout: fixed;
   width: 80%;
-
   @include g.mq("sp") {
     width: 100%
   }
@@ -14,11 +13,15 @@
     @include g.font(16, 16, 19.36, 400);
     border: 1px solid g.$color-line;
     padding: 8px 20px;
+    @include g.mq("sp") {
+      padding-inline: 10px;
+    }
   }
 
   th {
     width: 30%;
   }
+
   tr:nth-child(2n) {
     background-color: g.$color-background;
   }
