@@ -14,21 +14,22 @@
 
     &:hover {
       opacity: g.$opacity;
-      color: g.$color-brown;
+      color: g.$color-accent;
     }
   }
 }
 
 .c-header__sns-links {
   display: flex;
+  align-items: baseline;
   gap: 1rem;
   padding-left: 20px;
   margin-top: 10px;
 }
 
 .c-header__sns-link {
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
 
   &:hover {
     path {

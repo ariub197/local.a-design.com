@@ -1185,7 +1185,10 @@ body {
 	font-family: "zen-kaku-gothic-new", "hiragino-kaku-gothic-pron", "heebo", sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	text-align: left;
+	width: 100%;
 }
 
 main {
@@ -1198,10 +1201,20 @@ img {
 	max-width: 100%;
 }
 
+article,
+section {
+	margin: 0 auto;
+	padding: 0;
+}
+
 a {
 	color: inherit;
 	display: block;
 	text-decoration: none;
+}
+
+* {
+	position: relative;
 }
 
 /*==========================================================
@@ -1671,11 +1684,12 @@ component
 }
 
 .c-header__nav-item:hover {
-	color: #6f3f1e;
+	color: #F7B97D;
 	opacity: 0.6;
 }
 
 .c-header__sns-links {
+	align-items: baseline;
 	display: flex;
 	gap: 1rem;
 	margin-top: 10px;
@@ -1683,8 +1697,8 @@ component
 }
 
 .c-header__sns-link {
-	height: 42px;
-	width: 42px;
+	height: 32px;
+	width: 32px;
 }
 
 .c-header__sns-link:hover path {
@@ -1830,6 +1844,7 @@ component
 	letter-spacing: 0em;
 	line-height: 1;
 	padding: 5px 26px;
+	pointer-events: none;
 	position: absolute;
 	right: 5px;
 	top: 10px;
@@ -2503,14 +2518,51 @@ project
 
 .p-works__link-sum {
 	background: #757575;
-	border: 1px solid #333;
 	color: #fff;
 	margin: 0 50px;
-	padding: 10px 50px;
+	position: relative;
+	transition: all 0.4s;
 }
 
 .p-works__link-sum:hover {
+	background: inherit;
+}
+
+.p-works__link-sum:hover::before {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+
+.p-works__link-sum:hover::after {
+	opacity: 0;
+	transform: scale(0, 0);
+}
+
+.p-works__link-sum::before {
 	background: #F7B97D;
+	content: "";
+	height: 100%;
+	inset: 0;
+	opacity: 0;
+	position: absolute;
+	transform: scale(1.3, 1.3);
+	width: 100%;
+	z-index: -1;
+}
+
+.p-works__link-sum::after {
+	border: 1px solid #333;
+	content: "";
+	height: 100%;
+	inset: 0;
+	position: absolute;
+	transition: all 0.4s;
+	width: 100%;
+}
+
+.p-works__link-sum a {
+	padding: 10px 50px;
+	width: 100%;
 }
 
 .wp-block-embed-twitter {

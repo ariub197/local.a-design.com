@@ -35,8 +35,8 @@
           </ul>
         </div>
         <div class="c-header__sns-links">
-          <a href="https://twitter.com/ari19702" class="c-header__sns-link u-desvg"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/logo_twitter.svg" alt="" width="42" height="42"></a>
-          <a href="https://github.com/ariub197" class="c-header__sns-link u-desvg"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/logo_github.svg" alt="" width="42" height="42">
+          <a href="https://twitter.com/ari19702" class="c-header__sns-link u-desvg"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/logo_twitter.svg" alt="" width="32" height="32"></a>
+          <a href="https://github.com/ariub197" class="c-header__sns-link u-desvg"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/logo_github.svg" alt="" width="32" height="32">
           </a>
         </div>
         <div class="l-header__contact"><a href="/contact/" class="c-contact-button u-desvg">

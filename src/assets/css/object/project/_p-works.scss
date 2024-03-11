@@ -74,14 +74,51 @@
   }
 
   &__link-sum {
-    padding: 10px 50px;
+    position: relative;
     color: g.$btn-color;
     background: g.$btn-background;
-    border: 1px solid g.$btn-solid;
     margin: 0 50px;
+    transition: all g.$transition;
 
     &:hover {
-      background: g.$btn-hover;
+      background: inherit;
+
+      &::before {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+
+      &::after {
+        transform: scale(0, 0);
+        opacity: 0;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      opacity: 0;
+      background: g.$btn-hover;;
+      transform: scale(1.3, 1.3);
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      transition: all g.$transition;
+      border: 1px solid g.$btn-solid;
+    }
+
+    a {
+      width: 100%;
+      padding: 10px 50px;
     }
   }
 }

@@ -18,7 +18,7 @@
           </p>
         </div>
       </div>
-      <p class="c-footer__copy">&copy 2023 Arisumi Design reserved.</p>
+      <p class="c-footer__copy">&copy 2023-2024 Arisumi Design reserved.</p>
     </div>
   </div>
 </footer>
