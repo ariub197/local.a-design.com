@@ -23,38 +23,23 @@
   display: flex;
   gap: 1rem;
   padding-left: 20px;
+  margin-top: 10px;
 }
 
 .c-header__sns-link {
   width: 42px;
   height: 42px;
-  font-size: 32px;
-  padding: 10px;
-
-  .fa-twitter {
-    width: inherit;
-    height: inherit;
-    inset: 0;
-    transition: all g.$transition;
-  }
-
-  .octicon-mark-github {
-    width: inherit;
-    height: inherit;
-    inset: 0;
-    transition: all g.$transition;
-    border: 0.5px solid #000;
-  }
 
   &:hover {
-    .fa-twitter {
-      color: rgb(29, 155, 240);
+    path {
+      fill: g.$white;
+      stroke: #333;
+      stroke-width: 2px;
     }
+  }
 
-    .octicon-mark-github {
-      fill: #fff;
-      background: #24292f;
-    }
+  path {
+    transition: all g.$transition;
   }
 }
 

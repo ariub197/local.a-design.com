@@ -1678,38 +1678,23 @@ component
 .c-header__sns-links {
 	display: flex;
 	gap: 1rem;
+	margin-top: 10px;
 	padding-left: 20px;
 }
 
 .c-header__sns-link {
-	font-size: 32px;
 	height: 42px;
-	padding: 10px;
 	width: 42px;
 }
 
-.c-header__sns-link .fa-twitter {
-	height: inherit;
-	inset: 0;
-	transition: all 0.4s;
-	width: inherit;
-}
-
-.c-header__sns-link .octicon-mark-github {
-	border: 0.5px solid #000;
-	height: inherit;
-	inset: 0;
-	transition: all 0.4s;
-	width: inherit;
-}
-
-.c-header__sns-link:hover .fa-twitter {
-	color: rgb(29, 155, 240);
-}
-
-.c-header__sns-link:hover .octicon-mark-github {
+.c-header__sns-link:hover path {
 	fill: #fff;
-	background: #24292f;
+	stroke: #333;
+	stroke-width: 2px;
+}
+
+.c-header__sns-link path {
+	transition: all 0.4s;
 }
 
 .github-box {
