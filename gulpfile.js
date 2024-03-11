@@ -113,4 +113,4 @@ exports.dev = gulp.parallel(compileSass, browserInit, watch);
 exports.minJS = minJS;
 exports.formatHTML = formatHTML;
 exports.build = gulp.parallel(formatHTML, minJS, compileSass, copyImage);
-exports.run = gulp.parallel(compileSass, browserInit, concatJS, concatPlugin, watch);
+exports.default = gulp.parallel(compileSass, browserInit, concatJS, concatPlugin, watch);

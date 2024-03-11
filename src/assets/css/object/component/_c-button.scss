@@ -139,14 +139,25 @@
   bottom: 40px;
   right: 40px;
   background: g.$pagetop;
-  border-radius: 50%;
   padding: 23px;
   z-index: map.get(g.$layer, pagetop);
+  mix-blend-mode: difference;
+  animation: border-transform 7s linear infinite;
   @include g.mq("sp") {
     width: 40px;
     height: 40px;
     bottom: 20px;
     right: 20px;
     padding: 13px 14px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border: 1px solid #000;
+    animation: border-transform-revers 7s linear infinite;
   }
 }
