@@ -67,9 +67,36 @@
 
   }
 
-  &__page-link {
-    a:hover {
+  &__prev-link,
+  &__next-link {
+    transition: all g.$transition;
+
+    &:hover {
       opacity: g.$opacity;
+    }
+
+    i {
+      transition: all g.$transition 0.1s;
+    }
+  }
+
+  &__prev-link {
+    &:hover {
+      transform: translateX(10px);
+
+      i {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &__next-link {
+    &:hover {
+      transform: translateX(-10px);
+
+      i {
+        transform: translateX(-10px);
+      }
     }
   }
 

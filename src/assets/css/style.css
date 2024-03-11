@@ -2512,8 +2512,35 @@ project
 	margin-top: 80px;
 }
 
-.p-works__page-link a:hover {
+.p-works__prev-link,
+.p-works__next-link {
+	transition: all 0.4s;
+}
+
+.p-works__prev-link:hover,
+.p-works__next-link:hover {
 	opacity: 0.6;
+}
+
+.p-works__prev-link i,
+.p-works__next-link i {
+	transition: all 0.4s 0.1s;
+}
+
+.p-works__prev-link:hover {
+	transform: translateX(10px);
+}
+
+.p-works__prev-link:hover i {
+	transform: translateX(10px);
+}
+
+.p-works__next-link:hover {
+	transform: translateX(-10px);
+}
+
+.p-works__next-link:hover i {
+	transform: translateX(-10px);
 }
 
 .p-works__link-sum {

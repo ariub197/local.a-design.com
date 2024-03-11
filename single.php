@@ -51,13 +51,9 @@
 
         <!-- page nation button -->
         <div class="p-works__page-nation">
-          <div class="p-works__page-link">
-            <?php next_post_link('%link', '<i class="fa-solid fa-angles-left"></i> 前の記事'); ?>
-          </div>
+          <?php next_post_link('%link', '<i class="fa-solid fa-angles-left"></i> 前の記事'); ?>
           <div class="p-works__link-sum"><a href="/works/">実績一覧</a></div>
-          <div class="p-works__page-link">
-            <?php previous_post_link('%link','次の記事 <i class="fa-solid fa-angles-right"></i>' ); ?>
-          </div>
+          <?php previous_post_link('%link','次の記事 <i class="fa-solid fa-angles-right"></i>' ); ?>
         </div>
       </div>
     </div>

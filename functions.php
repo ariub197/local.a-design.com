@@ -83,6 +83,14 @@ function my_mwform_error_message( $error, $key, $rule ) {
 }
 add_filter( 'mwform_error_message_mw-wp-form-xxx', 'my_mwform_error_message', 10, 3 );
 
-
+//前の記事・次の記事のリンクにclassを付与する
+function add_prev_post_link_class($output) {
+  return str_replace('<a href=', '<a class="p-works__prev-link" href=', $output);
+}
+add_filter( 'previous_post_link', 'add_prev_post_link_class' );
+function add_next_post_link_class($output) {
+  return str_replace('<a href=', '<a class="p-works__next-link" href=', $output);
+}
+add_filter( 'next_post_link', 'add_next_post_link_class' );
 
 ?>
