@@ -29,10 +29,10 @@
 }
 
 .c-contact-button {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30px max-content;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 18px 20px 17px 5px;
   background: g.$header-background;
   box-shadow: g.$box-shadow;
@@ -101,6 +101,7 @@
 }
 
 .c-button-more {
+  position: relative;
   display: flex;
   align-items: center;
   width: inherit;
@@ -117,19 +118,30 @@
   z-index: 1;
   transition: all g.$transition;
 
-  &:hover {
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
     background: g.$btn-background;
+    transition: all g.$transition;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: g.$white;
+
+    &::before {
+      width: 100%;
+    }
   }
 
   span {
     font-family: g.$font-en;
     padding: 3px 40px 3px 30px;
     @include g.font(20, 20, 0, 400);
-    transition: all g.$transition;
-
-    &:hover {
-      color: g.$white;
-    }
   }
 }
 

@@ -20,6 +20,8 @@
 }
 
 .c-header__sns-links {
+  display: flex;
+  gap: 1rem;
   padding-left: 20px;
 }
 
@@ -27,35 +29,31 @@
   width: 42px;
   height: 42px;
   font-size: 32px;
-  margin-top: 0.8rem;
+  padding: 10px;
 
-  &--twitter {
-    padding: 10px;
-
-    .fa-twitter {
-      transition: all g.$transition;
-    }
-
-    &:hover {
-      .fa-twitter {
-        color: rgb(29, 155, 240);
-      }
-    }
+  .fa-twitter {
+    width: inherit;
+    height: inherit;
+    inset: 0;
+    transition: all g.$transition;
   }
 
-  &--github {
-    padding: 10px;
+  .octicon-mark-github {
+    width: inherit;
+    height: inherit;
+    inset: 0;
+    transition: all g.$transition;
+    border: 0.5px solid #000;
+  }
 
-    .octicon-mark-github {
-      transition: all g.$transition;
-      border: 0.5px solid #000;
+  &:hover {
+    .fa-twitter {
+      color: rgb(29, 155, 240);
     }
 
-    &:hover {
-      .octicon-mark-github {
-        fill: #fff;
-        background: #24292f;
-      }
+    .octicon-mark-github {
+      fill: #fff;
+      background: #24292f;
     }
   }
 }

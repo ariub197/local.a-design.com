@@ -1676,38 +1676,38 @@ component
 }
 
 .c-header__sns-links {
+	display: flex;
+	gap: 1rem;
 	padding-left: 20px;
 }
 
 .c-header__sns-link {
 	font-size: 32px;
 	height: 42px;
-	margin-top: 0.8rem;
+	padding: 10px;
 	width: 42px;
 }
 
-.c-header__sns-link--twitter {
-	padding: 10px;
-}
-
-.c-header__sns-link--twitter .fa-twitter {
+.c-header__sns-link .fa-twitter {
+	height: inherit;
+	inset: 0;
 	transition: all 0.4s;
+	width: inherit;
 }
 
-.c-header__sns-link--twitter:hover .fa-twitter {
+.c-header__sns-link .octicon-mark-github {
+	border: 0.5px solid #000;
+	height: inherit;
+	inset: 0;
+	transition: all 0.4s;
+	width: inherit;
+}
+
+.c-header__sns-link:hover .fa-twitter {
 	color: rgb(29, 155, 240);
 }
 
-.c-header__sns-link--github {
-	padding: 10px;
-}
-
-.c-header__sns-link--github .octicon-mark-github {
-	border: 0.5px solid #000;
-	transition: all 0.4s;
-}
-
-.c-header__sns-link--github:hover .octicon-mark-github {
+.c-header__sns-link:hover .octicon-mark-github {
 	fill: #fff;
 	background: #24292f;
 }
@@ -1930,12 +1930,12 @@ component
 	align-items: center;
 	background: #fff;
 	box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.25);
-	display: flex;
+	display: grid;
 	gap: 10px;
+	grid-template-columns: 30px max-content;
 	justify-content: center;
 	padding: 18px 20px 17px 5px;
 	transition: all 0.4s;
-	width: 100%;
 }
 
 .c-contact-button:hover {
@@ -2000,6 +2000,7 @@ component
 	align-items: center;
 	display: flex;
 	height: inherit;
+	position: relative;
 	width: inherit;
 	-webkit-clip-path: polygon(1px 1px, calc(90% - 0.5px) 1px, calc(100% - 1.5px) 50%, calc(90% - 0.5px) calc(100% - 1px), 1px calc(100% - 1px));
 	background: #fff;
@@ -2009,8 +2010,24 @@ component
 	z-index: 1;
 }
 
-.c-button-more:hover {
+.c-button-more:before {
 	background: #757575;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	transition: all 0.4s;
+	width: 0%;
+	z-index: -1;
+}
+
+.c-button-more:hover {
+	color: #fff;
+}
+
+.c-button-more:hover::before {
+	width: 100%;
 }
 
 .c-button-more span {
@@ -2020,11 +2037,6 @@ component
 	letter-spacing: 0em;
 	line-height: 1;
 	padding: 3px 40px 3px 30px;
-	transition: all 0.4s;
-}
-
-.c-button-more span:hover {
-	color: #fff;
 }
 
 #c-pagetop {
@@ -4895,6 +4907,10 @@ html {
 84% {
 	border-radius: 54% 46% 50% 50%/61% 35% 65% 39%;
 }
+
+}
+
+@keyframes bth-hover {
 
 }
 
