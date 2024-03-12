@@ -15,5 +15,12 @@
     "gulp-uglify": "^3.0.2",
     "postcss": "^8.4.35",
     "sass": "^1.71.1"
-  }
+  },
+  "browserslist": [
+  "defaults",
+  "> 5%",
+  "IE 10",
+  "IE 9",
+  "last 2 versions"
+  ]
 }
