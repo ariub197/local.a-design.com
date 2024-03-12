@@ -1992,7 +1992,6 @@ component
 	-webkit-clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
 	background: #757575;
 	clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
-	z-index: -1;
 }
 
 .c-button-more {
@@ -2035,7 +2034,8 @@ component
 	font-weight: 400;
 	letter-spacing: 0em;
 	line-height: 1;
-	padding: 3px 40px 3px 30px;
+	margin: auto;
+	padding-right: 8px;
 }
 
 #c-pagetop {

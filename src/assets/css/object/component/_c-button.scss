@@ -95,7 +95,6 @@
   height: 30px;
   clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
   background: g.$btn-background;
-  z-index: -1;
   @include g.mq("sp") {
     margin-top: 20px;
   }
@@ -141,7 +140,8 @@
 
   span {
     font-family: g.$font-en;
-    padding: 3px 40px 3px 30px;
+    padding-right: 8px;
+    margin: auto;
     @include g.font(20, 20, 0, 400);
   }
 }
