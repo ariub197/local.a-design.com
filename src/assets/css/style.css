@@ -1954,9 +1954,10 @@ component
 	background: #fff;
 	border-radius: 0 0 6px 6px;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-	display: flex;
+	display: grid;
+	grid-template-columns: 30px max-content;
+	justify-content: center;
 	padding: 5px 5px 15px;
-	position: relative;
 	transition: all 0.4s;
 	width: 100%;
 }
@@ -3841,6 +3842,10 @@ main {
 
 html {
 	font-size: 2.7777777778vw;
+}
+
+.l-header__contact-sp {
+	width: 50px;
 }
 
 .l-work,

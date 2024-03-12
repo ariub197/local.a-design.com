@@ -53,9 +53,10 @@
   }
 
   &__sp {
-    position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: 30px max-content;
     align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 5px 5px 15px;
     background: g.$header-background;
