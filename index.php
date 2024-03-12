@@ -115,7 +115,7 @@
 <section id="work">
   <div class="l-content l-inner">
     <h2 class="c-content__title">Work</h2>
-    <div class="l-work__card-list">
+    <div class="l-work">
       <?php
       $works_query = new WP_Query(
         array(
@@ -128,7 +128,7 @@
     if ($works_query->have_posts()) : ?>
       <?php while ($works_query->have_posts()) : ?>
       <?php $works_query->the_post(); ?>
-      <div class="l-work__card">
+      <div class="c-work-card">
         <a href="<?php the_permalink(); ?>" class="c-work-card__item">
           <div class="c-work-card__img">
             <?php if(has_post_thumbnail()): ?>

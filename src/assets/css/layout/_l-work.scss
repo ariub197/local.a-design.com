@@ -1,37 +1,22 @@
 @use "../global/" as g;
 
 .l-work {
-
-  &__card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    @include g.mq("sp") {
-      display: block;
-    }
+  display: grid;
+  justify-content: space-between;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  @include g.mq("tab") {
+    gap: 1rem;
+  }
+  @include g.mobileL {
+    display: block;
   }
 
-  &__card {
-    flex: 0 1 calc(50% - 62px / 2);
-    &:nth-child(2n) {
-      margin-left: 62px;
-    }
-    &:nth-child(n + 3) {
-      margin-top: 40px;
-    }
-
+  &--triple {
+    @extend .l-work;
+    grid-template-columns: repeat(3, 1fr);
     @include g.mq("tab") {
-      flex: 0 1 calc(50% - 10px);
-      &:nth-child(2n) {
-        margin-left: 20px;
-      }
-    }
-    @include g.mq("sp") {
-      width: 100%;
-      &:nth-child(2n) {
-        margin-left: 0px;
-      }
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

@@ -1,6 +1,8 @@
 @use "../../global/" as g;
 
 .c-work-card {
+  width: 100%;
+
   &__img {
     filter: g.$img-filter;
     width: 100%;
@@ -40,6 +42,9 @@
     border-radius: 50px;
     pointer-events: none;
     z-index: 1;
+    @include g.mobileL {
+      font-size: 1rem;
+    }
   }
 
   &__link {

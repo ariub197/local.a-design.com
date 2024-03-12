@@ -11,11 +11,11 @@
 <section id="profile" class="l-content">
   <div class="l-inner">
     <h2 class="c-content__title">制作実績</h2>
-    <div class="l-work__card-list">
+    <div class="l-work--triple">
       <?php if (have_posts()) : ?>
       <?php while (have_posts()) : ?>
       <?php the_post(); ?>
-      <div class="l-work__card">
+      <div class="c-work-card">
         <a href="<?php the_permalink(); ?>" class="c-work-card__item">
           <div class="c-work-card__img">
             <?php if(has_post_thumbnail()): ?>
