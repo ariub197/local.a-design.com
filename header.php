@@ -17,6 +17,15 @@
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/src/assets/img/favicon.ico" type="image/x-icon">
   <?php wp_head(); ?>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZYE76QXDT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZZYE76QXDT');
+</script>
 
 <body>
   <div id="pointer"></div>
