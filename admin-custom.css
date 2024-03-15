@@ -29,7 +29,7 @@
 #adminmenu .custom-img9::before {
   content: "";
 }
-
+/* 
 #adminmenu .custom-class4::before {
   content: "";
   position: absolute;
@@ -41,8 +41,19 @@
   background-size: contain;
   width: 18px;
   height: 18px;
-}
+} */
 
+#menu-posts .custom-img4::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 9px;
+  transform: translateY(-50%);
+  background-image: url(./admin-custom_img/icon_work.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* 
 #adminmenu .custom-class9::before {
   content: "";
   position: absolute;
@@ -54,4 +65,8 @@
   background-size: contain;
   width: 18px;
   height: 18px;
+} */
+
+#adminmenu .custom-img9::before {
+  content: "\f465";
 }
