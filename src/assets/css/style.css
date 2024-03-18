@@ -108,7 +108,6 @@ img {
 	border: none;
 	height: auto;
 	vertical-align: bottom;
-	width: 100%;
 }
 
 ul,
@@ -1369,12 +1368,11 @@ html {
 
 body {
 	color: #333333;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	display: grid;
 	font-family: "zen-kaku-gothic-new", "hiragino-kaku-gothic-pron", "heebo", sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
+	grid-template-columns: 1fr 80%;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	text-align: left;
@@ -1382,8 +1380,7 @@ body {
 }
 
 main {
-	margin-left: auto;
-	width: 80%;
+	width: 100%;
 }
 
 img {
@@ -1406,6 +1403,9 @@ a {
 * {
 	position: relative;
 }
+
+/* shift-away
+----------------------------------------------------------------- */
 
 /*==========================================================
 layout
@@ -2175,6 +2175,39 @@ component
 	margin-top: 20px;
 }
 
+.c-skill {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.c-skill__card {
+	-webkit-filter: grayscale(100%) contrast(80%);
+	filter: grayscale(100%) contrast(80%);
+	-webkit-transition: -webkit-filter 0.4s;
+	transition: -webkit-filter 0.4s;
+	transition: filter 0.4s;
+	transition: filter 0.4s, -webkit-filter 0.4s;
+}
+
+.c-skill__card:hover {
+	-webkit-filter: none;
+	filter: none;
+}
+
+.c-skill__img {
+	-o-object-fit: cover;
+	object-fit: cover;
+	width: 60px;
+}
+
 .c-button-contact {
 	-webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
 	background: #fff;
@@ -2692,6 +2725,9 @@ component
 	background: rgba(253, 254, 0, 0.5);
 	transition: 0.5s;
 }
+
+/* data-theme (tippy)
+----------------------------------------------------------------- */
 
 /*==========================================================
 project
@@ -3664,8 +3700,8 @@ utility
 
 @media (max-width: 1109px) {
 
-main {
-	width: calc(100% - 225px);
+body {
+	grid-template-columns: 1fr calc(100% - 225px);
 }
 
 .l-catch {
@@ -3981,7 +4017,6 @@ body {
 
 main {
 	padding-top: 50px;
-	width: 100%;
 }
 
 .l-header {
@@ -4099,6 +4134,15 @@ main {
 
 .c-overview dt {
 	width: 90px;
+}
+
+.c-skill__card {
+	-webkit-filter: none;
+	filter: none;
+}
+
+.c-skill__img {
+	width: 40px;
 }
 
 .c-content-button {

@@ -1,0 +1,29 @@
+@use "../../global/" as g;
+
+.c-skill {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__card {
+    filter: grayscale(100%) contrast(80%);
+    transition: filter g.$transition;
+    @include g.mq("sp") {
+      filter: none;
+    }
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 60px;
+    @include g.mq("sp") {
+      width: 40px;
+    }
+  }
+}

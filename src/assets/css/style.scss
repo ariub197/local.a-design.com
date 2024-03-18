@@ -4,6 +4,7 @@ foundation
 @use "foundation/reset";
 @use 'foundation/_swiper_bundle';
 @use "foundation/base";
+@use "foundation/shift-away";
 
 /*==========================================================
 layout
@@ -29,6 +30,7 @@ component
 @use "object/component/c-catch";
 @use "object/component/c-work-card";
 @use "object/component/c-overview";
+@use "object/component/c-skill";
 @use "object/component/c-button";
 @use "object/component/breadcrumb";
 @use "object/component/c-footer";
@@ -37,6 +39,7 @@ component
 
 //pointer
 @use "object/component/pointer";
+@use "object/component/data-theme";
 
 /*==========================================================
 project

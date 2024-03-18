@@ -92,6 +92,8 @@
         </dl>
       </div>
     </div>
+    <div class="u-margin-top--narrow"></div>
+    <?php get_template_part('/template-parts/skill'); ?>
     <a href="/contact/" class="c-button-contact-profile">お気軽にご相談ください</a>
   </div>
 </section>

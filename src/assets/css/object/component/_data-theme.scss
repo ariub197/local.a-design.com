@@ -1,0 +1,32 @@
+/* data-theme (tippy)
+----------------------------------------------------------------- */
+$caution_shadow: 0px 3px 6px;
+$caution_polygon_width: 1.5rem;
+$caution_polygon_height: 1.5rem;
+$caution_arrow_bottom: .6rem;
+$caution_arrow_width: 1rem;
+$caution_arrow_height: 1rem;
+
+@use '../../global' as g;
+// [data-theme~='blue'] {
+//   padding: g.$narrow;
+//   font-size: 12px;
+//   color: g.$black_base;
+//   border-radius: 0;
+//   background: #ffff00;
+//   border: 1px solid g.$gray_base;
+//   filter: drop-shadow($caution_shadow g.$box-shadow);
+
+//   &::after {
+//     position: absolute;
+//     z-index: 2;
+//     top: 0;
+//     left: 0;
+//     background: greenyellow;
+//     display: block;
+//     width: $caution_polygon_width;
+//     height: $caution_polygon_height;
+//     content: '';
+//     clip-path: polygon(0% 0%, 0% 100%, 100% 0);
+//   }
+// }
