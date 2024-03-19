@@ -24,7 +24,7 @@ document.addEventListener("mousemove", function (e) {
 });
 
 //リンクへ吸い付く処理
-const linkElem = document.querySelectorAll("a:not(.no_stick_)");
+const linkElem = document.querySelectorAll(".stick-active, a:not(.no_stick_)");
 for (let i = 0; i < linkElem.length; i++) {
   //マウスホバー時
   linkElem[i].addEventListener("mouseover", function (e) {
