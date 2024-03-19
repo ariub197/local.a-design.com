@@ -29,8 +29,7 @@
 #adminmenu .custom-img9::before {
   content: "";
 }
-/* 
-#adminmenu .custom-class4::before {
+/* #adminmenu .custom-class4::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -53,8 +52,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-/* 
-#adminmenu .custom-class9::before {
+/* #adminmenu .custom-class9::before {
   content: "";
   position: absolute;
   top: 50%;

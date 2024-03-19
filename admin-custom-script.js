@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function addCustomClasses(selector, prefix) {
     // 指定されたセレクタに一致するすべての要素を取得
     var elements = document.querySelectorAll(selector);
-    
+
     // クラス名に付ける番号カウンターの初期値
     var counter = 1;
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     elements.forEach(function (element) {
       // 要素のクラスリストにカスタムクラスを追加
       element.classList.add(prefix + counter);
-      
+
       // カウンターを増加して、次の番号を準備
       counter++;
     });
