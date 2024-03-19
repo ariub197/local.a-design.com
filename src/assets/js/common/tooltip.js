@@ -6,7 +6,7 @@
 $(function () {
   // tippyGeneral
   tippy(".tippy", {
-    theme: "black",
+    theme: "main",
     zIndex: "19999",
     placement: 'top',
     animation: 'shift-toward-subtle',
@@ -29,13 +29,4 @@ $(function () {
     trigger: "click",
     zIndex: "19999",
   });
-
-
-  tippy('.cap', {//指定した要素にツールチップが出現
-    placement: 'top-start',
-    animation: 'shift-toward-subtle',
-    theme: 'light-border',
-    duration: 200,
-  }
-  )
 });

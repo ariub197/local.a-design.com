@@ -3,8 +3,8 @@
 html {
   font-size: 16px;
   cursor: none;
-  @include g.mobileL {
-    font-size: calc(1vw * 1000 / 360);
+  @include g.mq("tab") {
+    font-size: 80%;
   }
 }
 

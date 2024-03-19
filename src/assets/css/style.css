@@ -1407,6 +1407,34 @@ a {
 /* shift-away
 ----------------------------------------------------------------- */
 
+.tippy-box[data-animation=shift-away][data-state=hidden] {
+	opacity: 0;
+}
+
+.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=top] {
+	-webkit-transform: translateY(10px);
+	-ms-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=bottom] {
+	-webkit-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=left] {
+	-webkit-transform: translateX(10px);
+	-ms-transform: translateX(10px);
+	transform: translateX(10px);
+}
+
+.tippy-box[data-animation=shift-away][data-state=hidden][data-placement^=right] {
+	-webkit-transform: translateX(-10px);
+	-ms-transform: translateX(-10px);
+	transform: translateX(-10px);
+}
+
 /*==========================================================
 layout
 ==========================================================*/
@@ -2167,7 +2195,6 @@ component
 	font-weight: 400;
 	letter-spacing: 0.01936em;
 	line-height: 1.5;
-	margin-left: 20px;
 	width: calc(100% - 122px);
 }
 
@@ -2192,6 +2219,7 @@ component
 	-webkit-filter: grayscale(100%) contrast(80%);
 	filter: grayscale(100%) contrast(80%);
 	-webkit-transition: -webkit-filter 0.4s;
+	cursor: pointer;
 	transition: -webkit-filter 0.4s;
 	transition: filter 0.4s;
 	transition: filter 0.4s, -webkit-filter 0.4s;
@@ -2728,6 +2756,19 @@ component
 
 /* data-theme (tippy)
 ----------------------------------------------------------------- */
+
+[data-theme~=main] {
+	background: #F7B97D;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	border-radius: 4px;
+	color: #4d4d4d;
+	font-size: 12px;
+}
+
+[data-theme~=main] .tippy-arrow {
+	color: #F7B97D;
+}
 
 /*==========================================================
 project
@@ -3700,6 +3741,10 @@ utility
 
 @media (max-width: 1109px) {
 
+html {
+	font-size: 80%;
+}
+
 body {
 	grid-template-columns: 1fr calc(100% - 225px);
 }
@@ -4055,7 +4100,7 @@ main {
 }
 
 .l-content {
-	margin-top: 80px;
+	margin-top: 60px;
 }
 
 .l-text-accent::after {
@@ -4071,7 +4116,7 @@ main {
 	font-weight: 400;
 	letter-spacing: 0em;
 	line-height: 1;
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 	width: 170px;
 }
 
@@ -4097,7 +4142,7 @@ main {
 }
 
 .c-content__img {
-	margin: 50px 0 80px;
+	margin: 50px 0 60px;
 	width: 100%;
 }
 
@@ -4273,10 +4318,6 @@ main {
 }
 
 @media (max-width: 425px) {
-
-html {
-	font-size: 2.7777777778vw;
-}
 
 .l-header__contact-sp {
 	width: 50px;

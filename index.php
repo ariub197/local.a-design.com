@@ -177,6 +177,11 @@
       </tr>
     </table>
     <p class="p-price__text">※価格は目安となりますので規模により変動いたします。まずはご相談ください。</p>
+
+    <!-- c-skill start -->
+    <div class="u-margin-top"></div>
+      <?php get_template_part('/template-parts/skill'); ?>
+    <!-- c-skill end -->
   </div>
 </section>
 

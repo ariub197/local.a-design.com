@@ -10,6 +10,7 @@
   &__card {
     filter: grayscale(100%) contrast(80%);
     transition: filter g.$transition;
+    cursor: pointer;
     @include g.mq("sp") {
       filter: none;
     }

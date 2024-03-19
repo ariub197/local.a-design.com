@@ -15,7 +15,7 @@
     @include g.mq("sp") {
       width: 170px;
       @include g.font(24, 24, 0, 400);
-      margin-bottom: 80px;
+      margin-bottom: 60px;
     }
 
     &::after {
@@ -125,7 +125,7 @@
     width: 80%;
     margin: 100px 0 120px;
     @include g.mq("sp") {
-      margin: 50px 0 80px;
+      margin: 50px 0 60px;
       width: 100%;
     }
   }
