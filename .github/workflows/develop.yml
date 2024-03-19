@@ -1,16 +1,16 @@
-name: Release to Develop Environment
+name: deploy to remote
+
 on:
   push:
     branches:
-      - develop
-
+      - master
 jobs:
-  job1:
+  deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: ssh and deploy
-        uses: appleboy/ssh-action@wordpress
+        uses: actions/checkout@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
