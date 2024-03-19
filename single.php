@@ -18,7 +18,7 @@
       <?php if(has_post_thumbnail()): ?>
       <?php the_post_thumbnail(); ?>
       <?php else: ?>
-      <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/No_image.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/No_image.png" alt="">
       <?php endif; ?>
       <h3 class="p-works__title"><?php the_title(); ?></h3>
       <div class="p-works__meta">
@@ -51,13 +51,9 @@
 
         <!-- page nation button -->
         <div class="p-works__page-nation">
-          <div class="p-works__page-link">
-            <?php next_post_link('%link', '<i class="fa-solid fa-angles-left"></i> 前の記事'); ?>
-          </div>
+          <?php next_post_link('%link', '<i class="fa-solid fa-angles-left"></i> 前の記事'); ?>
           <div class="p-works__link-sum"><a href="/works/">実績一覧</a></div>
-          <div class="p-works__page-link">
-            <?php previous_post_link('%link','次の記事 <i class="fa-solid fa-angles-right"></i>' ); ?>
-          </div>
+          <?php previous_post_link('%link','次の記事 <i class="fa-solid fa-angles-right"></i>' ); ?>
         </div>
       </div>
     </div>

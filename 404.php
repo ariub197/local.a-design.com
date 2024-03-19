@@ -12,5 +12,4 @@
   <div class="p-error-btn"><a href="/" class="p-error__top">TOPへ戻る</a></div>
 </div>
 
-
 <?php get_footer(); ?>

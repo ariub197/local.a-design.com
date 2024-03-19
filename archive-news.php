@@ -18,7 +18,7 @@
       <?php if(has_post_thumbnail()): ?>
       <?php the_post_thumbnail(); ?>
       <?php else: ?>
-      <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/No_image.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/No_image.png" alt="">
       <?php endif; ?>
       <h3 class="p-works__title"><?php the_title(); ?></h3>
       <div class="p-works__meta">

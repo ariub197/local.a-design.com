@@ -1,0 +1,22 @@
+/* data-theme (tippy)
+----------------------------------------------------------------- */
+$caution_shadow: 0px 3px 6px;
+$caution_polygon_width: 1.5rem;
+$caution_polygon_height: 1.5rem;
+$caution_arrow_bottom: .6rem;
+$caution_arrow_width: 1rem;
+$caution_arrow_height: 1rem;
+
+@use '../../global' as g;
+[data-theme~='main'] {
+  font-size: 12px;
+  color: g.$black_base;
+  border-radius: 0;
+  background: g.$color-accent;
+  border-radius: 4px;
+  border: 1px solid g.$gray_base;
+
+  .tippy-arrow {
+    color: g.$color-accent;
+  }
+}

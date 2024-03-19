@@ -42,7 +42,7 @@
     </div>
     <div class="l-catch__body">
       <div class="c-catch__img">
-        <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/Portforio-my-imge.png"
+        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/Portforio-my-imge.png"
           alt="arisumi-image">
       </div>
       <div class="c-catch__body">
@@ -115,7 +115,7 @@
 <section id="work">
   <div class="l-content l-inner">
     <h2 class="c-content__title">Work</h2>
-    <div class="l-work__card-list">
+    <div class="l-work">
       <?php
       $works_query = new WP_Query(
         array(
@@ -128,17 +128,17 @@
     if ($works_query->have_posts()) : ?>
       <?php while ($works_query->have_posts()) : ?>
       <?php $works_query->the_post(); ?>
-      <div class="l-work__card">
-        <a href="<?php the_permalink(); ?>" class="c-work__card-item">
-          <div class="c-work__card-img">
+      <div class="c-work-card">
+        <a href="<?php the_permalink(); ?>" class="c-work-card__item">
+          <div class="c-work-card__img">
             <?php if(has_post_thumbnail()): ?>
             <?php the_post_thumbnail(); ?>
             <?php else: ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/public/assets/img/No_image.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/No_image.png" alt="">
             <?php endif; ?>
           </div>
-          <div class="c-work__card-tag"><?php my_the_post_category(false); ?></div>
-          <div class="c-work__card-link">
+          <div class="c-work-card__tag"><?php my_the_post_category(false); ?></div>
+          <div class="c-work-card__link">
             <i class="fas fa-external-link"></i>
             <?php echo wp_trim_words( get_field('work_url'), 27, '...' ); ?>
           </div>
@@ -177,6 +177,11 @@
       </tr>
     </table>
     <p class="p-price__text">※価格は目安となりますので規模により変動いたします。まずはご相談ください。</p>
+
+    <!-- c-skill start -->
+    <div class="u-margin-top"></div>
+      <?php get_template_part('/template-parts/skill'); ?>
+    <!-- c-skill end -->
   </div>
 </section>
 
