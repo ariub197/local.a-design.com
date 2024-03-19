@@ -1,28 +1,27 @@
-# This is a basic workflow that is manually triggered
+name: deploy to remote
 
-name: Release to Develop Environment
-
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
 on:
   push:
     branches:
-      - developer
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+      - master
+ 
 jobs:
-  job1:
-    name: Deploy
+  deploy:
+ 
     runs-on: ubuntu-latest
+ 
     steps:
-      - name: ssh and deploy
-        uses: appleboy/ssh-action@Wordpress
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
-          script: |
-            cd /arisumi-design.com/public_html/wp-content/themes/Portfolio/.git
-            git checkout developer
-            git pull origin developer
+      - uses: actions/checkout@v1
+ 
+      - name: ssh key generate
+        run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+ 
+      - name: rsync deploy
+        run: rsync -auzrv --delete ./ $SSH_USER@$SSH_HOST:$DEPLOY_PATH --exclude ".git/" --exclude ".github/"  -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${SSH_PORT}"
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
