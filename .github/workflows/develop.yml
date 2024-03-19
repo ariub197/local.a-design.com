@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ssh and deploy
-        uses: appleboy/ssh-action@master
+        uses: ariub197/local.a-design.com@master
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
