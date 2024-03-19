@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ssh and deploy
-        uses: appleboy/ssh-action@master
+        uses: actions/checkout@v1
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
@@ -18,5 +18,5 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /arisumi-design.com/public_html/wp-content/themes/Portfolio/
-            git checkout develop
-            git pull origin develop
+            git checkout master
+            git pull origin master
