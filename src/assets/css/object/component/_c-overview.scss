@@ -23,7 +23,6 @@
   dd {
     @include g.font(16, 24, 19.36, 400);
     width: calc(100% - 122px);
-    margin-left: 20px;
   }
 }
 

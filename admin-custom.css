@@ -1,0 +1,72 @@
+.wp-menu-name {
+  position: relative;
+}
+
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+  background: rgb(163, 158, 158);
+}
+
+#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top, #adminmenu li>a.menu-top:focus {
+  background: #4E4047;
+}
+
+#wpadminbar {
+  background: #737A6B;
+  color: #a7aaad;
+}
+
+#wpadminbar .ab-top-menu>li.hover>.ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus, #wpadminbar:not(.mobile) .ab-top-menu>li:hover>.ab-item, #wpadminbar:not(.mobile) .ab-top-menu>li>.ab-item:focus {
+  background: #4E4047;
+}
+
+#adminmenu .custom-img4::before,
+#adminmenu .custom-img9::before {
+  content: "";
+}
+
+/* iconの変更 */
+#adminmenu .custom-img4::before,
+#adminmenu .custom-img9::before {
+  content: "";
+}
+/* 
+#adminmenu .custom-class4::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  transform: translateY(-50%);
+  background-image: url(./admin-custom_img/icon_work.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+} */
+
+#menu-posts .custom-img4::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 9px;
+  transform: translateY(-50%);
+  background-image: url(./admin-custom_img/icon_work.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* 
+#adminmenu .custom-class9::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+  background-image: url(./admin-custom_img/icon_mail.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+} */
+
+#adminmenu .custom-img9::before {
+  content: "\f465";
+}

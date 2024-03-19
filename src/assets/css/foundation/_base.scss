@@ -3,13 +3,14 @@
 html {
   font-size: 16px;
   cursor: none;
-  @include g.mobileL {
-    font-size: calc(1vw * 1000 / 360);
+  @include g.mq("tab") {
+    font-size: 80%;
   }
 }
 
 body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 80%;
   color: g.$color-text;
   font-family: g.$ff-base;
   font-size: g.$fz-base;
@@ -18,6 +19,9 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
+  @include g.mq("tab") {
+    grid-template-columns: 1fr calc(100% - 225px);
+  }
   @include g.mq("sp") {
     display: block;
   }
@@ -30,13 +34,8 @@ body {
 }
 
 main {
-  width: 80%;
-  margin-left: auto;
-  @include g.mq("tab") {
-    width: calc(100% - 225px);
-  }
+  width: 100%;
   @include g.mq("sp") {
-    width: 100%;
     padding-top: 50px;
   }
 }
