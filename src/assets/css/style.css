@@ -1977,13 +1977,12 @@ component
 	width: 32px;
 }
 
-.c-header__sns-link:hover path {
-	fill: #fff;
-	stroke: #333;
-	stroke-width: 2px;
+.c-header__sns-link:hover svg {
+	-webkit-transform: rotateY(360deg);
+	transform: rotateY(360deg);
 }
 
-.c-header__sns-link path {
+.c-header__sns-link svg {
 	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }

@@ -32,14 +32,13 @@
   height: 32px;
 
   &:hover {
-    path {
-      fill: g.$white;
-      stroke: #333;
-      stroke-width: 2px;
+
+    svg {
+      transform: rotateY(360deg);
     }
   }
 
-  path {
+  svg {
     transition: all g.$transition;
   }
 }
