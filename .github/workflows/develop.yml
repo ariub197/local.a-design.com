@@ -9,14 +9,14 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
-        script:
+        script: |
           cd /arisumi-design.com/public_html/wp-content/themes/Portfolio/local.a-design.com
           git checkout master
-          git pull origin master
+          git pull master
