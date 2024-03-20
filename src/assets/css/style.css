@@ -1598,10 +1598,16 @@ layout
 	height: 0.5rem;
 	left: 0;
 	position: absolute;
-	width: 100%;
 	z-index: -1;
 	-webkit-transition: all 0.4s;
+	opacity: 0;
 	transition: all 0.4s;
+}
+
+.l-text-accent.move::after {
+	opacity: 1;
+	-webkit-animation: transform-width 1s ease forwards 0.2s;
+	animation: transform-width 1s ease forwards 0.2s;
 }
 
 .l-profile {
@@ -7114,11 +7120,27 @@ main {
 
 }
 
-@-webkit-keyframes bth-hover {
+@-webkit-keyframes transform-width {
+
+0% {
+	width: 0%;
+}
+
+100% {
+	width: 100%;
+}
 
 }
 
-@keyframes bth-hover {
+@keyframes transform-width {
+
+0% {
+	width: 0%;
+}
+
+100% {
+	width: 100%;
+}
 
 }
 

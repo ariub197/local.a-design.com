@@ -23,15 +23,23 @@
   &::after {
     position: absolute;
     content: "";
-    width: 100%;
     height: g.rem(8);
     bottom: 4px;
     left: 0;
     background: g.$color-accent;
     z-index: -1;
     transition: all g.$transition;
+    opacity: 0;
     @include g.mq("sp") {
       background: g.$color-accent;
+    }
+  }
+
+  &.move {
+
+    &::after {
+      opacity: 1;
+      animation: transform-width 1s ease forwards 0.2s;
     }
   }
 }
