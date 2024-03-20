@@ -97,11 +97,6 @@
 
   &__body {
     float: left;
-    &:hover {
-      .l-text-accent::after {
-        background: g.$color-accent;
-      }
-    }
     @media (max-width: 870px) {
       padding-bottom: 17%;
     }

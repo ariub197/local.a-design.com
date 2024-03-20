@@ -27,7 +27,7 @@
     height: g.rem(8);
     bottom: 4px;
     left: 0;
-    background: g.$color-background;
+    background: g.$color-accent;
     z-index: -1;
     transition: all g.$transition;
     @include g.mq("sp") {

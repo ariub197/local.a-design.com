@@ -1542,10 +1542,6 @@ layout
 	transition: all 0.4s;
 }
 
-.l-catch__phrase:hover .l-text-accent::after {
-	background: #F7B97D;
-}
-
 .l-catch__body {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1596,7 +1592,7 @@ layout
 }
 
 .l-text-accent::after {
-	background: #d8d8d8;
+	background: #F7B97D;
 	bottom: 4px;
 	content: "";
 	height: 0.5rem;
@@ -1884,10 +1880,6 @@ component
 	width: 85%;
 }
 
-.c-content__body:hover .l-text-accent::after {
-	background: #F7B97D;
-}
-
 .c-content__list-item {
 	padding-left: 20px;
 	position: relative;
@@ -2092,10 +2084,6 @@ component
 
 .c-catch__body {
 	float: left;
-}
-
-.c-catch__body:hover .l-text-accent::after {
-	background: #F7B97D;
 }
 
 .c-work-card {

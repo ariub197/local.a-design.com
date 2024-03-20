@@ -31,12 +31,10 @@
         background: g.$color-accent;
         transition: all g.$transition;
       }
+
       .c-catch__phrase-accent {
         color: g.$color-accent;
         transition: all g.$transition;
-      }
-      .l-text-accent::after {
-        background: g.$color-accent;
       }
     }
   }
