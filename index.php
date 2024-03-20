@@ -49,13 +49,6 @@
         <p class="c-content__text">
           当サイトのデザイン・コーディングをはじめ、<br>ロゴデザインもすべて行いました。
         </p>
-        <p class="c-content__text not-sp">
-          このサイトでは、少しでも楽しんでもらえるよう<br>
-          カーソルに合わせてサイトが<span class="l-text-accent">色づく</span>ようにしています。</p>
-        <p class="c-content__text not-sp">
-          え？カーソル？？<br>
-          そうです。PC版だけです。
-        </p>
       </div>
     </div>
   </div>

@@ -93,12 +93,6 @@
       width: calc(100% - 20px);
       padding-left: 20px;
     }
-
-    &:hover {
-      .l-text-accent::after {
-        background: g.$color-accent;
-      }
-    }
   }
 
   &__list-item {
