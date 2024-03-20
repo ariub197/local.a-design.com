@@ -5,18 +5,18 @@ on:
     branches:
       - master
 jobs:
-  deploy:
-    name: Deploy
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: ssh and deploy
-        uses: actions/checkout@v1
-        with:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
-          SSH_PORT: ${{ secrets.SSH_PORT }}
-          script: |
-            cd /arisumi-design.com/public_html/wp-content/themes/Portfolio/
-            git checkout master
-            git pull origin master
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script:
+          cd /arisumi-design.com/public_html/wp-content/themes/Portfolio/local.a-design.com
+          git checkout master
+          git pull origin master
