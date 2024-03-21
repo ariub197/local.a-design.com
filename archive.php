@@ -11,6 +11,15 @@
 <section id="profile" class="l-content">
   <div class="l-inner">
     <h2 class="c-content__title">制作実績</h2>
+
+    <div class="u-width-fit u-margin-auto">
+      <a href="https://frequent-impulse-981.notion.site/3d75baf0a955414a98f31b59cef27194?v=a46a2bc5ba184482955646d250e71de0&pvs=4" class="c-button-svg">
+        <svg><rect x="2" y="2" rx="0" fill="none" width="275" height="54"></rect></svg>
+        <span>企業制作実績はこちら</span>
+      </a>
+    </div>
+    <div class="u-margin-top"></div>
+
     <div class="l-work--triple">
       <?php if (have_posts()) : ?>
       <?php while (have_posts()) : ?>

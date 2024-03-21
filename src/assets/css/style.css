@@ -2437,6 +2437,49 @@ component
 	animation: border-transform-revers 7s linear infinite;
 }
 
+.c-button-svg {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	padding: 1rem 2rem;
+	width: 278px;
+	-webkit-transition: all 0.4s;
+	background-color: transparent;
+	border-radius: 0.5rem;
+	color: #333;
+	cursor: pointer;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	transition: all 0.4s;
+}
+
+.c-button-svg:hover rect {
+	stroke-dashoffset: 385px;
+}
+
+.c-button-svg svg {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.c-button-svg rect {
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	stroke: #000;
+	stroke-width: 2;
+	stroke-dasharray: 300px, 16px;
+	stroke-dashoffset: 70px;
+}
+
 .breadcrumb {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -3436,6 +3479,12 @@ utility
 
 .u-width-full--PO {
 	width: 100%;
+}
+
+.u-width-fit {
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 
 .u-width-95 {
