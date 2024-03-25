@@ -69,7 +69,6 @@
     padding-left: 29px;
     color: g.$text-accent;
     transition: all g.$transition;
-
     @include g.mq("sp") {
       color: g.$color-accent;
     }
@@ -82,21 +81,19 @@
   &__img {
     width: 350px;
     max-width: 100%;
-    margin-left: auto;
-
     @include g.mq("tab") {
       width: 50%;
     }
-
+    @media (max-width: 870px) {
+      margin-inline: auto;
+    }
     @include g.mq("sp") {
       width: 300px;
       max-width: 100%;
-      margin: 0 auto 5.3vw;
     }
   }
 
   &__body {
-    float: left;
     @media (max-width: 870px) {
       padding-bottom: 17%;
     }
@@ -104,7 +101,6 @@
       float: none;
       padding-bottom: 0;
       width: 100%;
-      text-align: center;
     }
   }
 }
