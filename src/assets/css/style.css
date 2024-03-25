@@ -1887,6 +1887,7 @@ component
 }
 
 .c-content__list-item {
+	line-height: 1.4;
 	padding-left: 20px;
 	position: relative;
 }
@@ -2478,6 +2479,72 @@ component
 	stroke-width: 2;
 	stroke-dasharray: 300px, 16px;
 	stroke-dashoffset: 70px;
+}
+
+.c-timeline {
+	list-style: none;
+}
+
+.c-timeline__list {
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.c-timeline__list:not(:first-child) .c-timeline__date,
+.c-timeline__list:not(:first-child) .c-timeline__content {
+	padding-top: 20px;
+}
+
+.c-timeline__list:not(:first-child) .c-timeline__content:after {
+	top: 20px;
+}
+
+.c-timeline__date {
+	float: left;
+	width: 90px;
+}
+
+.c-timeline__content {
+	float: left;
+	padding-left: 28px;
+	width: calc(100% - 90px);
+}
+
+.c-timeline__content:before {
+	background: #ddd;
+	bottom: 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	width: 3px;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.c-timeline__content:after {
+	background: #333;
+	content: "";
+	height: 12px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 12px;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	border-radius: 100%;
+	transform: translateX(-50%);
+}
+
+.c-timeline__head {
+	font-weight: 700;
+}
+
+.c-timeline__text {
+	line-height: 1.4;
+	margin-top: 16px;
 }
 
 .breadcrumb {
@@ -3855,6 +3922,19 @@ body {
 }
 
 @media (max-width: 768px) {
+
+.c-timeline__date {
+	width: 60px;
+}
+
+.c-timeline__content {
+	padding-left: 20px;
+	width: calc(100% - 60px);
+}
+
+.c-timeline__text {
+	margin-top: 10px;
+}
 
 .u-disp-block--PU {
 	display: block;
