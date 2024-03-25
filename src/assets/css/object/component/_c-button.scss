@@ -190,10 +190,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 278px;
+  justify-content: center;
+  width: 264px;
   font-weight: 700;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
+  padding: 16px 24px;
+  font-size: 18px;
   transition: all g.$transition;
   letter-spacing: 0.1em;
   color: g.$color-main;
