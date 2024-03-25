@@ -11,7 +11,6 @@
     border-bottom: 1px solid g.$color-main;
     margin-bottom: 120px;
     white-space: nowrap;
-
     @include g.mq("sp") {
       width: 170px;
       @include g.font(24, 24, 0, 400);
@@ -98,6 +97,7 @@
   &__list-item {
     position: relative;
     padding-left: 20px;
+    line-height: 1.4;
 
     &:not(:first-child) {
       margin-top: 10px;

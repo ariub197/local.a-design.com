@@ -1,0 +1,77 @@
+@use "../../global/" as g;
+$height_timeline: 20px;
+
+.c-timeline {
+  list-style: none;
+
+  &__list {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+
+    &:not(:first-child){
+      .c-timeline__date,
+      .c-timeline__content {
+        padding-top: $height_timeline;
+      }
+
+      .c-timeline__content:after {
+        top: $height_timeline;
+      }
+    }
+  }
+
+  &__date {
+    width: 90px;
+    float: left;
+    @include g.tabletS {
+      width: 60px;
+    }
+  }
+
+  &__content {
+    width: calc(100% - 90px);
+    float: left;
+    padding-left: 28px;
+    @include g.tabletS {
+      width: calc(100% - 60px);
+      padding-left: 20px;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      background: g.$gray_base;
+      transform: translateX(-50%);
+    }
+
+    &:after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: g.$color-main;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-50%);
+      border-radius: 100%;
+    }
+  }
+
+  &__head {
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 16px;
+    line-height: 1.4;
+    @include g.tabletS {
+      margin-top: 10px;
+    }
+  }
+}
+
