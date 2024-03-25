@@ -2737,7 +2737,7 @@ component
 }
 
 #pointer {
-	background-color: #000;
+	background-color: rgba(184, 184, 184, 0.6);
 	border-radius: 50%;
 	height: 8px;
 	left: -4px;
@@ -2749,7 +2749,8 @@ component
 }
 
 #pointer__stalker {
-	background: rgba(184, 184, 184, 0.5);
+	background: inherit;
+	border: 1px solid #888;
 	border-radius: 50%;
 	height: 40px;
 	left: -20px;
@@ -2760,10 +2761,8 @@ component
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	-webkit-transition: -webkit-transform 0.2s;
-	transition: -webkit-transform 0.2s;
-	transition: transform 0.2s;
-	transition: transform 0.2s, -webkit-transform 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 	-webkit-transition: top, 0.5s, left 0.5s, width 0.5s, height 0.5s, background-color 0.5s, -webkit-transform 0.2s;
@@ -2786,7 +2785,8 @@ component
 	top: -32px;
 	width: 64px;
 	-webkit-transition: 0.5s;
-	background: rgba(253, 254, 0, 0.5);
+	background: rgba(184, 184, 184, 0.5);
+	border: none;
 	transition: 0.5s;
 }
 

@@ -8,7 +8,7 @@
   pointer-events: none;
   width: 8px;
   height: 8px;
-  background-color: #000;
+  background-color: rgba(g.$gray_dark, 0.6);
   z-index: 1001;
   @include g.mq("sp") {
     display: none;
@@ -21,10 +21,11 @@
     left: -20px;
     width: 40px;
     height: 40px;
-    background: rgba(g.$gray_dark, 0.5);
+    background: inherit;
+    border: 1px solid #888;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.2s; //ちょっと遅れてついてくるように
+    transition: all 0.2s;
     transition-timing-function: ease-out;
     transition: transform 0.2s, top, 0.5s, left 0.5s, width .5s, height .5s, background-color .5s;
     transition-timing-function: ease-out;
@@ -45,7 +46,8 @@
       width: 64px;
       height: 64px;
       transition: .5s;
-      background: rgba(#fdfe00, 0.5);
+      background: rgba(g.$gray_dark, 0.5);
+      border: none;
     }
   }
 }
