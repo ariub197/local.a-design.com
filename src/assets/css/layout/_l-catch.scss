@@ -2,16 +2,14 @@
 
 .l-catch {
   position: relative;
-  padding-top: 40px;
+  padding-top: 60px;
   padding: 0 calc(g.$pd-x-pc / 2);
   max-width: 1280px;
-
   @include g.mq("tab") {
-    padding-top: 100px;
+    padding-top: 60px;
   }
-
   @include g.mq("sp") {
-    padding: 159px g.$pd-x-sp 0;
+    padding: 40px g.$pd-x-sp 0;
   }
 
   &__phrase {
@@ -19,9 +17,9 @@
     top: 0;
     transform: translateY(-42%);
     z-index: 2;
-
     @include g.mq("sp") {
-      top: 50px;
+      position: relative;
+      transform: translateY(0);
       width: 90%;
     }
 
@@ -44,12 +42,14 @@
     flex-direction: row-reverse;
     align-items: end;
     padding-left: calc(g.$pd-x-pc / 2);
-
-    @include g.mq("sp") {
-      display: block;
+    gap: 24px;
+    @media (max-width:870px) {
+      flex-direction: column;
       padding-left: 0;
     }
-
+    @include g.mq("sp") {
+      margin-top: 20px;
+    }
   }
 
   &__text {

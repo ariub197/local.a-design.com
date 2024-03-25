@@ -34,11 +34,6 @@
         <h2 class="c-catch__phrase">Less is More<span></span></h2>
         <p class="c-catch__phrase-accent">遊び心</p>
       </div>
-      <div class="c-catch">
-        <p class="c-catch__lead">WEBサイトはユーザーがいて<br>
-          <span class="l-text-accent">初めて完成するもの</span>
-        </p>
-      </div>
     </div>
     <div class="l-catch__body">
       <div class="c-catch__img">
@@ -47,8 +42,11 @@
       </div>
       <div class="c-catch__body">
         <p class="c-content__text">
-          当サイトのデザイン・コーディングをはじめ、<br>ロゴデザインもすべて行いました。
+          本サイトのデザイン・コーディングをはじめ、ロゴデザインもすべて行いました。<br>
+          <span class="l-text-accent">サイト利用者がいるからこそサイトが輝く</span>そんな想いから色を与えず無彩色でサイトを仕上げました。<br>
+          クライアント様とサイト利用者の橋渡しをしていく中で<span class="l-text-accent">当サイトも色付けていきたい。</span>と考えております。
         </p>
+        <p class="c-content__text u-margin-none">ぜひともあなたの事業の活躍のお手伝いをさせてください。</p>
       </div>
     </div>
   </div>

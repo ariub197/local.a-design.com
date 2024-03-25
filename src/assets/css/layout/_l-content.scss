@@ -18,6 +18,7 @@
 
 .l-text-accent {
   position: relative;
+  display: inline-block;
   z-index: 2;
 
   &::after {
