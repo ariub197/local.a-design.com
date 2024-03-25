@@ -5,17 +5,20 @@ on:
     branches:
       - master
 jobs:
-  job1:
-    name: Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: ssh and deploy
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
+      - uses: actions/checkout@v1
+      - name: ssh key generate
+        run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: rsync deploy
+        env:
+          SSH_USER: ${{ secrets.SSH_USERNAME }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
           script: |
             cd ./arisumi-design.com/public_html/wp-content/themes/Portfolio/local.a-design.com
             git checkout master
