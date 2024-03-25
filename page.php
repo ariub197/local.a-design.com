@@ -22,13 +22,13 @@
         ご連絡には遅くとも1営業日以内に返信いたします。<br>
         営業日以外の休日・祝日にも制作しますので、他の作業者が活動していない時間でも<span class="l-text-accent">圧倒的なスピード納品にも対応</span>いたします。
       </p>
-      <h3 class="c-content__sub-title"></h3>
+      <h3 class="c-content__sub-title">コンタクト・提供</h3>
       <p class="c-content__text">
-        ご依頼いただく皆様もご多忙のことと思いますので、ヒアリングシートや納品のチェックリストなど、<span class="l-text-accent">こちらで事前に用意</span>いたします。<br>
+        ご依頼いただく皆様もご多忙のことと思いますので、<span class="l-text-accent">ヒアリングシートや納品のチェックリスト</span>など、こちらで事前に用意いたします。<br>
         スムーズで意味のあるミーディングを心がけております。
       </p>
       <p class="c-content__text">
-        WordPressをはじめとしたCMSサイト作成の際にはお客様の方でサイトの更新やコンテンツの変更が行いるようマニュアルの作成・操作方法の指導などもしております。
+        WordPressをはじめとしたCMSサイト作成の際にはお客様の方でサイトの更新やコンテンツの変更が行いるよう<span class="l-text-accent">マニュアルの作成・操作方法の指導</span>などもしております。
       </p>
       <p class="c-content__text">
         お気軽にご相談ください。
@@ -40,7 +40,7 @@
           <p class="c-timeline__date">2019.03</p>
           <div class="c-timeline__content">
             <p class="c-timeline__head">芸術大学卒業</p>
-            <p class="c-timeline__text">ワーホリビザで渡加。アクセサリーショップ等でバイト。カナダ生活を満喫。</p>
+            <p class="c-timeline__text">建築デザイン専攻</p>
           </div>
         </li>
         <li class="c-timeline__list">
@@ -63,7 +63,7 @@
           <p class="c-timeline__date">2023.04</p>
           <div class="c-timeline__content">
             <p class="c-timeline__head">Web制作フリーランスとして独立</p>
-            <p class="c-timeline__text"></p>
+            <p class="c-timeline__text">現在5社の企業様と業務提携</p>
           </div>
         </li>
       </ul>
@@ -87,10 +87,11 @@
         <li class="c-content__list-item">HTML、CSS、JavaScriptを使用して、使いやすいWebインターフェースの構築。</li>
         <li class="c-content__list-item">PHPを活用してサーバーサイドのロジックを実装し、データベースとの連携を確立。</li>
         <li class="c-content__list-item">Node.js(gulp,yarn,npm)を使用して、プロジェクトの依存関係を管理し、開発プロセスを最適化。</li>
-        <li class="c-content__list-item">wordpressでのオリジナルテーマの作成やswellでのサイト実装。</li>
+        <li class="c-content__list-item">wordpressでのオリジナルテーマの作成やSWELLでのサイト実装。</li>
         <li class="c-content__list-item">Gitを活用して、PullRequestを通じたコードレビューでチームメンバーとの協力開発を円滑に進め、ファイル管理 やコードチェックをし品質を維持。</li>
         <li class="c-content__list-item">レスポンシブでクロスブラウザ対応なフロントエンドを構築し、UX向上に貢献。 JavaScriptフレームワークを使用して、動的でインタラクティブなウェブサイトを実装。</li>
         <li class="c-content__list-item">XDを使用したUI/UXデザインの作成。</li>
+        <li class="c-content__list-item">サイト移転、ネームサーバー・DNSレコードの編集など、Web関連のあらゆる作業に対してトータルなサポートします。</li>
       </ul>
     </div>
   </div>
