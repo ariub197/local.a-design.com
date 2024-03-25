@@ -2446,10 +2446,13 @@ component
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	font-size: 1.2rem;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	font-size: 18px;
 	font-weight: 700;
-	padding: 1rem 2rem;
-	width: 278px;
+	justify-content: center;
+	padding: 16px 24px;
+	width: 264px;
 	-webkit-transition: all 0.4s;
 	background-color: transparent;
 	border-radius: 0.5rem;
