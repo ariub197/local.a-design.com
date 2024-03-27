@@ -3820,6 +3820,15 @@ utility
 
 }
 
+@media (min-width: 1110px) {
+
+.c-content-button {
+	height: 40px;
+	width: 150px;
+}
+
+}
+
 @media (max-width: 1448px) {
 
 .u-disp-none--DSU {
