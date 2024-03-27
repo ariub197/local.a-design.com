@@ -95,6 +95,10 @@
   height: 30px;
   clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
   background: g.$btn-background;
+  @media (min-width:1110px) {
+    width: 150px;
+    height: 40px;
+  }
   @include g.mq("sp") {
     margin-top: 20px;
   }
