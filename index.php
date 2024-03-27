@@ -85,7 +85,7 @@
           <li class="c-content__list-item">Gitでの共有作業</li>
         </ul>
       </div>
-      <div class="c-content-button"><a href="/profile/" class="c-button-more"><span>more</span></a></div>
+      <div class="c-content-button"><a href="/profile/" class="c-button-more"><span>Profile more</span></a></div>
     </div>
   </section>
   <section id="activity">
@@ -138,7 +138,7 @@
       <?php endwhile; ?>
       <?php endif; ?>
     </div>
-    <div class="c-content-button"><a href="/works/" class="c-button-more"><span>more</span></a></div>
+    <div class="c-content-button"><a href="/works/" class="c-button-more"><span>Work more</span></a></div>
   </div>
 </section>
 

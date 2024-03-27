@@ -19,14 +19,10 @@
   background: #4E4047;
 }
 
-#adminmenu .custom-img4::before,
-#adminmenu .custom-img9::before {
-  content: "";
-}
-
 /* iconの変更 */
-#adminmenu .custom-img4::before,
-#adminmenu .custom-img9::before {
+#adminmenu .menu-icon-post .wp-menu-image::before,
+#adminmenu .menu-icon-mw-wp-form .wp-menu-image::before,
+#adminmenu .menu-icon-news .wp-menu-image::before {
   content: "";
 }
 /* #adminmenu .custom-class4::before {
@@ -42,7 +38,7 @@
   height: 18px;
 } */
 
-#menu-posts .custom-img4::before {
+#menu-posts .menu-icon-post .wp-menu-image::before {
   content: "";
   position: absolute;
   top: 60%;
@@ -65,6 +61,10 @@
   height: 18px;
 } */
 
-#adminmenu .custom-img9::before {
+#adminmenu .menu-icon-mw-wp-form .wp-menu-image::before {
   content: "\f465";
+}
+
+#adminmenu .menu-icon-news .wp-menu-image::before {
+  content: "\f488";
 }
