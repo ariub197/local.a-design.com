@@ -77,7 +77,7 @@
         <div class="c-drawer-content__item"><a href="/news/">News</a></div>
       </div>
       <div class="c-header__sns-links-sp">
-        <a href="https://twitter.com/ari19702" class="c-header__sns-link"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://twitter.com/ari19702" class="c-header__sns-link"><img src="<?php echo get_template_directory_uri(); ?>/src/assets/img/logo_twitter.svg" alt="" width="32" height="32"></a>
         <a href="https://github.com/ariub197" class="c-header__sns-link">
           <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
             <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95
