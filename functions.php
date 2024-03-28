@@ -98,14 +98,12 @@ add_filter( 'next_post_link', 'add_next_post_link_class' );
 //---------------------------------------------------------------
 
 // 関数名は何でも良い
-function admin_custom_css()
-{
+function admin_custom_css() {
   echo '<link rel="stylesheet" type="text/css" href="' . get_template_directory_uri() . '/admin-custom.css">';
 }
 add_action('admin_head', 'admin_custom_css');
 
-function enqueue_custom_admin_script()
-{
+function enqueue_custom_admin_script() {
   // 管理画面のみにスクリプトをエンキュー
   wp_enqueue_script('admin-custom-script', get_template_directory_uri() . '/admin-custom-script.js', array('jquery'), '1.0.0', true);
 }

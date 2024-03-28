@@ -1,0 +1,11 @@
+@use "sass:map";
+@use "../../global/" as g;
+
+.c-contact {
+  width: 100%;
+
+  &__text {
+    line-height: 200%;
+    margin-bottom: 20px;
+  }
+}
