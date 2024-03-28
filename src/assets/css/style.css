@@ -2621,6 +2621,15 @@ component
 	text-align: center;
 }
 
+.c-contact {
+	width: 100%;
+}
+
+.c-contact__text {
+	line-height: 200%;
+	margin-bottom: 20px;
+}
+
 .wp-block-table {
 	margin: 60px auto 0;
 	max-width: 100%;
@@ -2635,6 +2644,7 @@ component
 #mw_wp_form_mw-wp-form-35 input[type=email],
 #mw_wp_form_mw-wp-form-35 input[type=url],
 #mw_wp_form_mw-wp-form-35 input[type=hidden] {
+	background: inherit;
 	border: none;
 	border-bottom: 1px solid #333;
 	line-height: 27px;
@@ -2716,12 +2726,16 @@ component
 	top: 0;
 }
 
-.c-form__title {
+.c-form__title,
+.c-form__title-textarea {
 	font-size: 1rem;
 	font-weight: 700;
 	letter-spacing: 0.01936em;
 	line-height: 1;
-	margin: 20px 0;
+}
+
+.c-form__title-textarea {
+	margin-block: 20px;
 }
 
 .c-form th {
@@ -4383,18 +4397,18 @@ main {
 }
 
 #mw_wp_form_mw-wp-form-35 textarea {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 
 #mw_wp_form_mw-wp-form-35 input[type=submit] {
 	padding: 20px;
 }
 
-.c-form__title {
+.c-form__title-textarea {
 	margin-bottom: 0;
 }
 
-.c-form tr {
+.c-form__input {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
